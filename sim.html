@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ダメージシミュレーター</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<main>
+<h1>ダメージ（ステータス）シミュレーター</h1>
+<p class="lead">ステータスを入れると、技のダメージ・消費呪力・焼き切れ・範囲がすぐ変わります。ゲームの本「ステータス」に出る数字を入れてください。</p>
+
+<div class="seg" id="tech-seg" role="tablist" style="margin:10px 0 14px">
+  <button data-t="gojo" class="on">無下限呪術</button>
+  <button data-t="rika">リカ</button>
+  <button data-t="tokusa">十種影法術</button>
+</div>
+
+<div class="sim-layout">
+  <div class="card sim-panel">
+    <div class="field"><label for="in-jut">術式ダメージ <small>はじめ5</small></label>
+      <div class="row"><input type="range" id="r-jut" min="0" max="100" value="5"><input type="number" id="in-jut" min="0" value="5"></div></div>
+    <div class="field"><label for="in-sous">呪力操作 <small>はじめ0</small></label>
+      <div class="row"><input type="range" id="r-sous" min="0" max="100" value="0"><input type="number" id="in-sous" min="0" value="0"></div></div>
+    <div class="field"><label>出力</label>
+      <div class="seg" id="cha-seg"><button data-c="1" class="on">Ⅰ</button><button data-c="2">Ⅱ</button><button data-c="3">Ⅲ</button></div></div>
+    <div class="field"><label for="in-target">相手</label><select id="in-target"></select></div>
+
+    <div class="field" data-for="rika"><label for="in-st">攻撃力（ステータス） <small>はじめ5</small></label>
+      <div class="row"><input type="range" id="r-st" min="0" max="100" value="5"><input type="number" id="in-st" min="0" value="5"></div></div>
+    <div class="field" data-for="rika"><label for="in-rank">階級（リカの防御・攻撃間隔）</label><select id="in-rank"></select></div>
+    <label class="check" data-for="rika"><input type="checkbox" id="in-body"> 肉体強化ON（力Ⅰ：攻撃力+3）</label>
+
+    <div class="field" data-for="tokusa"><label for="in-lv">式神レベル <small>1〜10</small></label>
+      <div class="row"><input type="range" id="r-lv" min="1" max="10" value="1"><input type="number" id="in-lv" min="1" max="10" value="1"></div></div>
+    <div class="field" data-for="tokusa"><label for="in-dist">貫牛が走る距離 <small>ブロック</small></label>
+      <div class="row"><input type="range" id="r-dist" min="0" max="450" value="300"><input type="number" id="in-dist" min="0" value="300"></div></div>
+    <label class="check" data-for="tokusa"><input type="checkbox" id="in-ry"> 自分の領域の中（消費半分・維持0）</label>
+    <label class="check" data-for="tokusa"><input type="checkbox" id="in-iji"> 「影の練度」解放済み（維持−30%）</label>
+    <label class="check" data-for="tokusa"><input type="checkbox" id="in-genki"> 気力満タン（攻撃+20%）</label>
+
+    <label class="check" data-for="gojo"><input type="checkbox" id="in-eye"> 六眼を付けている</label>
+    <label class="check" data-for="gojo rika"><input type="checkbox" id="in-toku2"> 特典：赫2倍（無下限）／純愛砲（リカ）</label>
+    <label class="check" data-for="gojo"><input type="checkbox" id="in-toku4"> 特典：蒼ワープ強化</label>
+
+    <h3 style="margin:16px 0 4px;font-size:15px">呪力</h3>
+    <div class="field"><label for="in-mj">最大呪力 <small>空なら下の2つから計算</small></label>
+      <div class="row"><input type="number" id="in-mj" min="0" placeholder="計算する" style="width:100%"></div></div>
+    <div class="field"><label for="in-jum2">基礎呪力 <small>はじめ500</small></label>
+      <div class="row"><input type="range" id="r-jum2" min="0" max="20000" step="100" value="500"><input type="number" id="in-jum2" min="0" value="500"></div></div>
+    <div class="field"><label for="in-jum">呪力倍率 <small>1で+4%</small></label>
+      <div class="row"><input type="range" id="r-jum" min="0" max="100" value="0"><input type="number" id="in-jum" min="0" value="0"></div></div>
+    <div class="field"><label for="in-cur">今の呪力 <small>空なら満タン</small></label>
+      <div class="row"><input type="number" id="in-cur" min="0" placeholder="満タン" style="width:100%"></div></div>
+    <div class="field"><label for="in-jh">呪力回復 <small>0.5秒ごと・はじめ1</small></label>
+      <div class="row"><input type="range" id="r-jh" min="0" max="60" value="1"><input type="number" id="in-jh" min="0" value="1"></div></div>
+
+    <h3 style="margin:16px 0 4px;font-size:15px">結界術（領域展開）</h3>
+    <div class="field"><label for="in-kek">結界術 <small>はじめ0</small></label>
+      <div class="row"><input type="range" id="r-kek" min="0" max="100" value="0"><input type="number" id="in-kek" min="0" value="0"></div></div>
+    <div class="field"><label for="in-kek2">結界強度 <small>プリセットの値</small></label>
+      <div class="row"><input type="range" id="r-kek2" min="0" max="100" value="0"><input type="number" id="in-kek2" min="0" value="0"></div></div>
+    <label class="check" data-for="gojo"><input type="checkbox" id="in-zon"> 詠唱赫が黒閃のゾーン中（無制限の紫が強くなる）</label>
+
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
+      <button id="btn-base" style="padding:7px 10px;cursor:pointer;background:var(--accent);color:#fff;border:none;border-radius:8px">今の値を基準にして比べる</button>
+      <button id="btn-clear" style="padding:7px 10px;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text)">比べるのをやめる</button>
+      <button id="btn-reset" style="padding:7px 10px;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text)">はじめの値に戻す</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="summary" id="summary"></div>
+    <p class="legend" id="base-info"></p>
+    <h2 style="margin-top:6px">技ごとの数字</h2>
+    <div class="tbl-wrap" id="table"></div>
+    <p class="legend">「ダメージ」は技そのもの、「相手へ」は相手の術式防御を引いた値、「合計の目安」は1回使ったときに1体に当たる合計（何回当たるかは目安）。「/tick」は1tick（1/20秒）ごとのダメージ。ダメージ1＝ハート半分。</p>
+
+    <h2>グラフ</h2>
+    <h3>1回で1体に与えるダメージ（相手の防御を引いた後・合計の目安）</h3>
+    <div class="bars" id="chart-dmg"></div>
+    <h3>消費呪力</h3>
+    <div class="bars" id="chart-cost"></div>
+
+    <h2>計算のもと</h2>
+    <div class="card">
+      <ul>
+        <li>消費呪力：<span class="mono">max(0, a×(術式−操作)) ＋ b ＋ c×術式</span>（a:loss）。六眼は <span class="mono">c×術式</span> だけ。</li>
+        <li>焼き切れ：<span class="mono">max(10, A ＋ 術式 − B×操作)</span>（a:ykkr）。詠唱は＋100。</li>
+        <li>十種影法術の消費：a,b,c それぞれを出力で変えて（Ⅰ＝半分・Ⅲ＝1.5倍、切り上げ）から上の式（t:pay）。</li>
+        <li>式神の体力 <span class="mono">(hb＋hk×操作)×(17＋Lv)÷18</span>、攻撃 <span class="mono">(ab＋ak×術式)×(17＋Lv)÷18÷10</span>、出力Ⅰは半分・Ⅲは1.8倍（t:stats）。</li>
+        <li>呪霊の術式防御：1レベル4%（最大80%）。普通のモブの防具（鎧）はこの計算に入れていません。</li>
+        <li><span class="tag est">目安</span> の数字：当たる回数や持続は、敵の動きや確率で変わります。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</main>
+<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<script src="assets/nav.js"></script>
+<script src="assets/sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>リカ（理香）</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<main>
+<h1 class="c-rika">リカ（理香）</h1>
+<p class="lead">「呪いの刀」で戦いながら、リカを呼んで一緒に戦う術式。呪霊の手足を切り落とすと、その術式を <b>模倣</b> して使えるようになります。</p>
+<p class="toc"><a href="#ctrl">操作</a><a href="#tree">技術ツリー</a><a href="#rika">リカ本体</a><a href="#setsu">接続時間</a><a href="#jun">純愛砲</a><a href="#mohou">模倣</a><a href="#waza">技の一覧</a></p>
+<p><a href="sim.html?t=rika">→ シミュレーターで自分のステータスの数字を見る</a></p>
+
+<h2 id="ctrl">操作</h2>
+<div class="tbl-wrap"><table>
+  <tr><th>操作</th><th>すること</th></tr>
+  <tr><td><kbd>スニーク</kbd>＋<kbd>右クリック</kbd>（右手）</td><td>次の技へ（1〜7）</td></tr>
+  <tr><td>ジャンプ中に<kbd>スニーク</kbd>＋<kbd>左クリック</kbd></td><td>前の技へ</td></tr>
+  <tr><td><kbd>右クリック</kbd>（右手）</td><td>リカを呼ぶ（いないとき）／技1ならリカの距離を切り替え／技2なら純愛砲 など</td></tr>
+  <tr><td><kbd>右クリック</kbd>（左手に持つ）</td><td>模倣した術式を使う（技ごとにちがう）</td></tr>
+  <tr><td><kbd>左クリック</kbd></td><td>見ている敵をリカに攻撃させる（技1〜4）／技4ならうすらび／技7なら呪力放出</td></tr>
+  <tr><td>左手に持って <kbd>ダブルスニーク</kbd></td><td>リカを影にしまう（体力は保存される）</td></tr>
+  <tr><td>右手の刀で攻撃</td><td>「呪いの刀」は呪具。突き攻撃で前に突進する</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+  <tr><th>技</th><th>右手</th><th>左手</th></tr>
+  <tr><td>1</td><td>リカの距離（近→中→長→超近）</td><td>ブギウギ（模倣）</td></tr>
+  <tr><td>2</td><td><b>純愛砲</b></td><td>無下限（模倣）／スニークで みずし（模倣）</td></tr>
+  <tr><td>3</td><td>投射呪法（模倣）</td><td>呪言（模倣）／スニークで 赤血（模倣）</td></tr>
+  <tr><td>4</td><td>左クリックで うすらび（模倣）</td><td>ヤコブの梯子（模倣）</td></tr>
+  <tr><td>5</td><td>領域展開「真贋相愛」</td><td>領域の効果を切り替え（無下限／みずし）</td></tr>
+  <tr><td>6</td><td>反転術式（左クリックで他人を治す）</td><td>焼き切れの治療</td></tr>
+  <tr><td>7</td><td>右クリック：呪力放出2／左クリック：呪力放出</td><td>—</td></tr>
+</table></div>
+
+<h2 id="tree">技術ツリー（スコアで解放）</h2>
+<div class="tbl-wrap"><table>
+  <tr><th>スキル1 接続時間</th><th class="num">スコア</th><th>スキル2 顕現</th><th class="num">スコア</th><th>スキル3 純愛砲</th><th class="num">スコア</th></tr>
+  <tr><td>接続時間Ⅰ（上限800）</td><td class="num">30</td><td>部分顕現Ⅰ（出力Ⅰ）</td><td class="num">はじめから</td><td>純愛砲</td><td class="num">75</td></tr>
+  <tr><td>接続時間Ⅱ（上限1000）</td><td class="num">30</td><td>部分顕現Ⅱ（出力Ⅱ）</td><td class="num">50</td><td></td><td></td></tr>
+  <tr><td>接続時間Ⅲ（上限1200）</td><td class="num">50</td><td>完全顕現（出力Ⅲ）</td><td class="num">50</td><td></td><td></td></tr>
+</table></div>
+
+<h2 id="rika">リカ本体 <span class="tag exact">確定</span></h2>
+<p>リカは今の <b>出力</b> の大きさで出てきます（Ⅰ部分顕現・Ⅱ中顕現・Ⅲ完全顕現）。出す前に「補充」が必要です。</p>
+<ol class="steps">
+  <li><b>補充</b>：リカがいないときに右クリック → 接続時間600を使ってリカを補充（体力 3＋10×呪力操作）。</li>
+  <li><b>召喚</b>：もう一度右クリック → 接続時間10を使ってリカが出てくる。</li>
+  <li><b>しまう</b>：左手に持ってダブルスニーク。残りの体力は保存され、次に出すときそのまま。</li>
+</ol>
+<div class="tbl-wrap"><table>
+  <tr><th>項目</th><th>計算</th></tr>
+  <tr><td>最大体力</td><td class="mono">(5＋呪力操作) × 10</td></tr>
+  <tr><td>攻撃力</td><td class="mono">(1＋術式ダメージ) × 0.3（Ⅰ）／0.6（Ⅱ）／1.0（Ⅲ）　小数切り捨て</td></tr>
+  <tr><td>防御力（階級で決まる）</td><td>なし0・4級2・3級5・2級10・1級15・特級30</td></tr>
+  <tr><td>呪霊への攻撃の間隔</td><td>階級で速くなる：5秒（なし）→4.5→4→3.5→3→2.5（準1級）→1.5（特別1級）→0.5秒（特級）</td></tr>
+  <tr><td>移動の速さ</td><td>0.5（Ⅰ）／0.7（Ⅱ）／0.9（Ⅲ）</td></tr>
+</table></div>
+<ul>
+  <li>リカの攻撃は呪霊に <b>完全術式ダメージ</b>（攻撃力の分）で入ります。</li>
+  <li>リカを出している間は、最大呪力がとても大きくなります：<span class="mono">(基礎呪力＋5000) × (100＋8×呪力倍率) ÷ 100</span>。</li>
+  <li>完全顕現のリカは、近くの味方の体力が8割を切ると、術師の呪力750で反転術式をかけることがあります。</li>
+  <li>リカの距離：超近距離はいつも術師の後ろ、近距離は7、中距離は20、長距離は45ブロック離れると術師のところへ戻ってきます。</li>
+</ul>
+
+<h2 id="setsu">接続時間</h2>
+<ul>
+  <li>リカが出ていないとき、0.5秒ごとに+1。上限は600（技術ツリーで800／1000／1200）。</li>
+  <li>リカが出ている間は、0.5秒ごとに 出力Ⅱで−1、出力Ⅲで−2（出力Ⅰは減らない）。0になるとリカは戻ります。</li>
+  <li>特典「接続費用が30%の確率で発生しない」で減り方が少なくなります。</li>
+</ul>
+
+<h2 id="jun">純愛砲</h2>
+<p>技2を選んで <b>右手</b> で右クリック。近く（35ブロック以内）に <b>完全顕現のリカ</b> がいるときだけ使えます（技術ツリー「純愛砲」が必要）。</p>
+<ul>
+  <li>リカが約5秒ためる間、毎tick 接続時間 −3（特典で−1）・呪力 −5。呪力が0になると接続時間も0になります。</li>
+  <li>ためが終わると、リカから光線の弾がたくさん飛びます。1発のダメージは <span class="mono">術式ダメージ × 0.2</span>、当たる範囲4ブロック <span class="tag exact">確定</span>。</li>
+  <li>弾は確率で「飛び道具レベル3」（はね返されにくい）になります。破壊ONならブロックに当たって爆発。</li>
+</ul>
+
+<h2 id="mohou">模倣</h2>
+<p>術式を持つ呪霊（<a href="curses.html#jut">呪霊のページ</a>）の <b>手足や目を切り落とした</b> とき、近く（6ブロック）にいると <b>20%</b> で、その術式を模倣できます（進捗「模倣[○○]」）。模倣していない術式は「○○が使えるやつの四肢が必要」と出て使えません。</p>
+<div class="note">自分の領域「真贋相愛」の中（展開から6秒後）では、<b>模倣していない術式も使え、焼き切れも増えません</b>。</div>
+
+<h2 id="waza">技の一覧 <span class="tag exact">確定</span></h2>
+<p>消費は <a href="status.html#cost">a,b,c の式</a>、焼き切れは A,B の式です。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>技</th><th>消費 (a,b,c)</th><th>焼き切れ (A,B)</th><th>焼き切れ上限</th><th>効果・ダメージ</th></tr>
+  <tr><td>ブギウギ</td><td>10, 100, 10</td><td>100, 2</td><td>300未満</td><td>15ブロック先の敵と自分（スニーク中は2体の敵どうし）の位置を入れ替える</td></tr>
+  <tr><td>無下限</td><td>15, 300, 10</td><td>200, 3</td><td>200未満</td><td>約20秒、無下限のバリア（近くの敵を止める）</td></tr>
+  <tr><td>みずし（捌）</td><td>50, 100, 10</td><td>100, 2</td><td>300未満</td><td>まわりに斬撃。1回 <span class="mono">術式×0.1</span>、半径2.5</td></tr>
+  <tr><td>投射呪法</td><td>10, 100, 10</td><td>50, 2</td><td>300未満</td><td>約4秒、すごく速く動ける</td></tr>
+  <tr><td>呪言</td><td>15, 300, 10</td><td>150, 3</td><td>300未満</td><td>10ブロック先の半径10に、ランダムで「動くな」（60%・動きを止める）／「爆ぜろ」（20%・10ダメージ）／「捻れろ」（20%・手足を切る）</td></tr>
+  <tr><td>赤血</td><td>25, 300, 10</td><td>100, 1</td><td>300未満</td><td>約2.5秒、血の弾を撃つ。1発 <span class="mono">術式×0.1</span></td></tr>
+  <tr><td>うすらび</td><td>20, 500, 50</td><td>100, 2</td><td>300未満</td><td>飛び道具を自分の向きにはね返し、目の前の敵に <span class="mono">攻撃力×0.5＋術式</span></td></tr>
+  <tr><td>ヤコブの梯子</td><td>50, 500, 100</td><td>—</td><td>100未満</td><td>光の柱を落とす</td></tr>
+  <tr><td>呪力放出（技7・左クリック）</td><td>10, 300, 10</td><td>—</td><td>—</td><td>5本の斬撃が扇形に飛ぶ。1本 <span class="mono">攻撃力×0.4</span></td></tr>
+  <tr><td>呪力放出2（技7・右クリック）</td><td>Ⅰ 5,300,10／Ⅱ 10,500,20／Ⅲ 15,1000,40</td><td>—</td><td>—</td><td>約0.5秒、呪力をまとって攻撃</td></tr>
+  <tr><td>領域「真贋相愛」</td><td>呪力1500</td><td>150, 1</td><td>500未満</td><td><a href="domain.html">領域展開のページ</a></td></tr>
+  <tr><td>反転術式</td><td>1500 − 呪力操作</td><td>—</td><td>—</td><td>リカははじめから使える</td></tr>
+</table></div>
+<p>「攻撃力」は自分の攻撃力（ステータスの攻撃力×0.2、刀や力の効果もふくむ）です。</p>
+</main>
+<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

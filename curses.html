@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>呪霊とボス</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<main>
+<h1>呪霊とボス</h1>
+<p class="toc"><a href="#spawn">呪霊の出方</a><a href="#grade">等級ごとの強さ</a><a href="#bou">術式防御</a><a href="#hit">呪霊にダメージを入れるには</a><a href="#jut">術式を持つ呪霊</a><a href="#boss">ボス</a><a href="#mini">ミニボス</a></p>
+
+<h2 id="spawn">呪霊の出方</h2>
+<p>およそ <b>1分ごと</b> に、プレイヤーの近く（45ブロックくらい）にいる普通の敵モブ（ゾンビ・スケルトン・クモ・クリーパー・エンダーマン・ハスク、ネザーではマグマキューブ・ガスト・ゾンビピグリン）が、確率で <b>呪霊</b> に変わります。呪霊は名前が見えていて、少しの間光ります。</p>
+<p>どの等級が出るかは、<b>そのワールドで一番階級が高い人</b> で決まります <span class="tag est">確率</span>。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>だれかの階級</th><th>出る等級</th></tr>
+  <tr><td>まだ4級になっていない</td><td>4級だけ</td></tr>
+  <tr><td>4級</td><td>3級〜4級</td></tr>
+  <tr><td>3級</td><td>2級〜4級</td></tr>
+  <tr><td>準2級</td><td>1級〜4級</td></tr>
+  <tr><td>準1級</td><td>特級〜4級（さらに30%で1段階強くなる）</td></tr>
+  <tr><td>特級</td><td>さらに40%で1段階強くなる</td></tr>
+</table></div>
+<p>ネザーの呪霊（マグマキューブ・ガスト・ゾンビピグリン）は「ネザー呪霊」というとても強い呪霊になります。生きている時間が長いほど、呪霊はたくさん出ます。</p>
+
+<h2 id="grade">等級ごとの強さと報酬 <span class="tag exact">確定</span></h2>
+<div class="tbl-wrap"><table>
+  <tr><th>等級</th><th class="num">体力</th><th class="num">攻撃力</th><th class="num">速さ</th><th class="num">術式防御</th><th class="num">スコア</th><th class="num">討伐pt</th></tr>
+  <tr><td>4級呪霊</td><td class="num">30</td><td class="num">3</td><td class="num">0.24</td><td class="num">8%</td><td class="num">1</td><td class="num">1</td></tr>
+  <tr><td>3級呪霊</td><td class="num">60</td><td class="num">4</td><td class="num">0.25</td><td class="num">16%</td><td class="num">2</td><td class="num">1</td></tr>
+  <tr><td>2級呪霊</td><td class="num">90</td><td class="num">5</td><td class="num">0.28</td><td class="num">24%</td><td class="num">3</td><td class="num">2</td></tr>
+  <tr><td>1級呪霊</td><td class="num">150</td><td class="num">8</td><td class="num">0.32</td><td class="num">36%</td><td class="num">4</td><td class="num">3</td></tr>
+  <tr><td>特級呪霊</td><td class="num">200〜500</td><td class="num">15</td><td class="num">0.34</td><td class="num">48%</td><td class="num">8</td><td class="num">3</td></tr>
+  <tr><td>ネザー呪霊</td><td class="num">400〜800</td><td class="num">15</td><td class="num">0.37</td><td class="num">80%</td><td class="num">0</td><td class="num">6</td></tr>
+  <tr><td>ボス</td><td class="num">下の表</td><td class="num">—</td><td class="num">—</td><td class="num">60%</td><td class="num">下の表</td><td class="num">—</td></tr>
+</table></div>
+<p>「術式を持つ呪霊」（下）は、体力などが少し違います。クリーパーの呪霊は等級が高いほど爆発が大きくなります（特級は爆発の大きさ14）。</p>
+
+<h2 id="bou">術式防御（呪霊の守り）</h2>
+<p>呪霊は「術式防御」という見えない靴をはいていて、<b>術式のダメージを等級ごとの割合だけ減らします</b>。1レベルで4%、最大80%です。</p>
+<div class="formula">実際のダメージ ＝ 技のダメージ ×（1 − 術式防御）
+例：1級呪霊（36%）に 20ダメージの技 → 20 × 0.64 ＝ 12.8</div>
+<p><a href="sim.html">シミュレーター</a>では、相手の等級を選ぶとこの割合を引いた値も出ます。</p>
+
+<h2 id="hit">呪霊にダメージを入れるには</h2>
+<p>4級以外の呪霊は「耐性」がとても高く、<b>普通の剣や素手ではほとんどダメージが入りません</b>（4級も80%カット）。次の方法でダメージを入れます。</p>
+<ul>
+  <li><b>術式の技</b>（蒼・赫・茈、リカ、式神の攻撃など）… 耐性を無視します。</li>
+  <li><b>呪具</b>（「呪具化」の付いた武器）で叩く … 耐性を無視する追加ダメージが入ります（計算上は攻撃のダメージの約2倍 <span class="tag est">目安</span>）。</li>
+  <li><b>肉体強化（出力Ⅱ以上）中の素手</b> … 呪具と同じ追加ダメージが入ります。</li>
+  <li><b>黒閃</b> … 全部入ります。</li>
+</ul>
+<p>呪霊への術式ダメージには2種類あります。<b>連続ダメージ</b>（蒼・茈など）は無敵時間を無視して毎tick当たり、<b>完全ダメージ</b>は防具も無視します。</p>
+
+<h2 id="jut">術式を持つ呪霊</h2>
+<p>呪霊の一部は術式を持っています（頭の見た目が変わる）。リカは、こういう呪霊を倒すと <b>確率で術式を模倣</b> できます（<a href="rika.html#mohou">リカの模倣</a>）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>術式</th><th>呪霊がしてくること</th></tr>
+  <tr><td>ブギウギ</td><td>位置を入れ替える</td></tr>
+  <tr><td>無下限</td><td>攻撃を止める壁</td></tr>
+  <tr><td>投射呪法</td><td>すごく速く動く</td></tr>
+  <tr><td>呪言</td><td>「動くな」など</td></tr>
+  <tr><td>赤血</td><td>血の弾を撃つ</td></tr>
+  <tr><td>みずし</td><td>斬撃の結界</td></tr>
+  <tr><td>うすらび</td><td>飛び道具をはね返す</td></tr>
+  <tr><td>ヤコブの梯子</td><td>光の柱</td></tr>
+</table></div>
+<p>一部の呪霊は <b>呪霊領域</b> を使ってきます。</p>
+
+<h2 id="boss">ボス</h2>
+<p>技と倒し方は <a href="bosses.html">ボス攻略</a> にまとめています。</p>
+<p>4級呪術師になると、ボスが出始めます。<b>倒した人</b>が報酬をもらいます（スコアは25ブロック以内の全員）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>ティア</th><th>ボス</th><th class="num">体力</th><th>おもな報酬</th></tr>
+  <tr><td>1</td><td>汚ールマイト</td><td class="num">200</td><td>ボス討伐+1、基礎呪力+500、強化上限+10</td></tr>
+  <tr><td>1</td><td>フィジギフ</td><td class="num">400</td><td>ボス討伐+1、防御力+6・基礎呪力+500・呪力操作+3・結界術+3、<b>反転術式を覚える</b>、強化上限+10</td></tr>
+  <tr><td>1</td><td>さとる</td><td class="num">500</td><td>ボス討伐+1、基礎呪力+1000・呪力回復+2・焼き切れ回復アップ、強化上限+20、<b>2級への条件</b></td></tr>
+  <tr><td>2</td><td>はなみ</td><td class="num">1000</td><td>ボス討伐+2、基礎呪力+500・防具強度5、強化上限+15、簡易領域</td></tr>
+  <tr><td>2</td><td>じょうご</td><td class="num">1000</td><td>ボス討伐+2、防御力+5・基礎呪力+500・落下ダメージ半分、強化上限+15、簡易領域</td></tr>
+  <tr><td>2</td><td>まひと</td><td class="num">1000</td><td>ボス討伐+2、防御力+5・基礎呪力+500・スニークが速くなる、強化上限+15、簡易領域</td></tr>
+  <tr><td>3</td><td>五条悟</td><td class="num">1000</td><td>スコア+500・強化上限+6（さとるを倒した後に出る）</td></tr>
+  <tr><td>3</td><td>すっくん</td><td class="num">5000</td><td>スコア+500・強化上限+6（宿儺の指が20本そろうと出る）</td></tr>
+  <tr><td>3</td><td>めろんぱん</td><td class="num">5000</td><td>スコア+500・強化上限+6（ミニボスを全部倒すと出る）</td></tr>
+</table></div>
+<p>ティア1を倒すと+20スコア、ティア2は+50スコア（強化上限+3）。ボスはそれぞれ領域や特別な技を使います。ボスの近くではテレポートなどが使えません。</p>
+
+<h2 id="mini">ミニボス</h2>
+<p>コロニー（大阪・愛知・仙台）などに出ます。倒すとスコア+10・討伐ポイント+2、初めて倒すと <b>人殺しポイント</b>（特典と交換できる）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>ミニボス</th><th class="num">体力</th><th class="num">人殺しpt</th></tr>
+  <tr><td>日車</td><td class="num">650</td><td class="num">150</td></tr>
+  <tr><td>かしも</td><td class="num">1000</td><td class="num">150</td></tr>
+  <tr><td>よろず</td><td class="num">1000</td><td class="num">75</td></tr>
+  <tr><td>いしごおり</td><td class="num">500</td><td class="num">75</td></tr>
+  <tr><td>ゲロ女</td><td class="num">500</td><td class="num">75</td></tr>
+  <tr><td>黒沐死（ゴキ）</td><td class="num">1000</td><td class="num">75</td></tr>
+  <tr><td>レジスタ</td><td class="num">650</td><td class="num">50</td></tr>
+  <tr><td>はぜのき</td><td class="num">500</td><td class="num">50</td></tr>
+  <tr><td>ヘリ男</td><td class="num">650</td><td class="num">50</td></tr>
+  <tr><td>天使</td><td class="num">500</td><td class="num">50</td></tr>
+</table></div>
+<p>ほかに、平安の世界には「ドブカス」（体力500）がいます。倒すと基礎呪力+1500・ガードトークン+300・強化上限+15。</p>
+</main>
+<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

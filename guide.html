@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ゲームの進め方</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<main>
+<h1>ゲームの進め方</h1>
+<p class="lead">はじめてから特級呪術師になるまでの流れです。</p>
+<p class="toc"><a href="#start">はじめ方</a><a href="#book">本の使い方</a><a href="#score">スコアの集め方</a><a href="#use">スコアの使い道</a><a href="#rank">階級</a><a href="#boss">ボスとティア</a><a href="#death">死んだとき</a><a href="#other">その他の機能</a></p>
+
+<h2 id="start">1. はじめ方（術式の手に入れ方）</h2>
+<ol class="steps">
+  <li>データパックを入れて最初に読み込むと、だれかの足元の横に <b>コマンドブロック</b> と <b>レバー</b> が置かれます（上にガラスの柱が立つので目印になります）。</li>
+  <li>レバーを入れると、チャットに3つの術式の名前が出ます。<b>名前をクリック</b>すると、その術式になります。
+    <div class="tbl-wrap"><table>
+      <tr><th>術式</th><th>手に入るもの</th><th>ひとこと</th></tr>
+      <tr><td class="c-gojo"><b>無下限呪術</b></td><td>「無下限呪術」の棒＋本</td><td>強い飛び道具3種。呪力の消費が大きい。</td></tr>
+      <tr><td class="c-rika"><b>理香（リカ）</b></td><td>「呪いの刀」＋本</td><td>リカを呼んで一緒に戦う。敵の術式をまねできる。</td></tr>
+      <tr><td class="c-tokusa"><b>十種影法術</b></td><td>「十種影法術」の棒＋本</td><td>式神を呼んで戦う。</td></tr>
+    </table></div>
+  </li>
+  <li>はじめて術式を選んだとき、ステータスが最初の値になります：
+    術式ダメージ <b>5</b>、呪力操作 <b>0</b>、結界術 <b>0</b>、基礎呪力 <b>500</b>（最大呪力500）、攻撃力スコア <b>5</b>、ガードトークン <b>300</b>、出力 <b>Ⅰ</b>、強化上限 <b>20</b>。</li>
+  <li>本の2ページ目「<b>術式リセット</b>」で術式を捨てて、もう一度選び直せます（ステータスはそのまま）。</li>
+</ol>
+<div class="note">呪力（画面右のサイドバー「呪力」）は0.5秒ごとに「呪力回復」の分だけ増えます。最初は0.5秒で1（1秒で2）。階級やボスで回復量が増えます。</div>
+
+<h2 id="book">2. 本（「ほん」）の使い方</h2>
+<p>術式を選ぶともらえる本は、文字を <b>クリック</b> して使うメニューです。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>ページ</th><th>項目</th><th>できること</th></tr>
+  <tr><td>1</td><td>近くの仲間にテレポート</td><td>謎負担40以下のとき。敵に狙われている・領域がある・ボスが20m以内だと使えない。</td></tr>
+  <tr><td>1</td><td>ステータス</td><td>ステータス画面を出して、<b>スコアで強化</b>する（<a href="#use">下を見る</a>）。</td></tr>
+  <tr><td>1</td><td>買い物</td><td>村人のお店を呼ぶ（TEMUチップ・絆創膏・大福・呪いの作業台など）。</td></tr>
+  <tr><td>1</td><td>オート反転</td><td>体力が8割を切ると自動で反転術式（呪力1500）。<a href="status.html#hanten">反転術式</a></td></tr>
+  <tr><td>1</td><td>アビリティ1</td><td>無下限：無下限のオン／オフ。十種影法術：式神一覧（ステータス）。</td></tr>
+  <tr><td>1</td><td>インスタント焼き切れ回復</td><td>焼き切れで技が出せないとき、自動で焼き切れを治す。</td></tr>
+  <tr><td>2</td><td>技術ツリー表示</td><td>技（スキル1〜3）を<b>スコアで解放</b>する。</td></tr>
+  <tr><td>2</td><td>消費呪力表示</td><td>技を使ったとき、消費した呪力と焼き切れを目の前に数字で出す。</td></tr>
+  <tr><td>2</td><td>ディメンション切り替え</td><td>ボス討伐ポイント3以上で、別の世界（平安）と行き来する。</td></tr>
+  <tr><td>2</td><td>帳を降ろす</td><td>呪力1000で「帳」を張り、呪霊やボスの湧き方を変える（<a href="#other">下を見る</a>）。</td></tr>
+  <tr><td>2</td><td>呪力消費と焼き切れ確認</td><td>今のステータスで、各技の消費呪力と焼き切れを一覧で出す。</td></tr>
+  <tr><td>2</td><td>術式リセット／破壊切り替え／拠点作成</td><td>術式を選び直す／技でブロックを壊すかどうか／空に拠点を作る（1回だけ）。</td></tr>
+  <tr><td>3</td><td>拠点に帰還・コロニーへいく</td><td>拠点へ戻る。ボス討伐ポイント2以上で大阪・愛知・仙台コロニーへ（北海道は準備中）。</td></tr>
+</table></div>
+
+<h2 id="score">3. スコア（point2）の集め方</h2>
+<p>強化や技の解放に使う大事な数字が <b>スコア</b> です。呪霊やボスを倒したとき、<b>倒した場所から25ブロック以内にいる全員</b>がもらえます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>倒したもの</th><th class="num">スコア</th><th class="num">討伐ポイント</th></tr>
+  <tr><td>4級呪霊</td><td class="num">+1</td><td class="num">+1</td></tr>
+  <tr><td>3級呪霊</td><td class="num">+2</td><td class="num">+1</td></tr>
+  <tr><td>2級呪霊</td><td class="num">+3</td><td class="num">+2</td></tr>
+  <tr><td>1級呪霊</td><td class="num">+4</td><td class="num">+3</td></tr>
+  <tr><td>特級呪霊</td><td class="num">+8</td><td class="num">+3</td></tr>
+  <tr><td>ネザー呪霊</td><td class="num">0</td><td class="num">+6</td></tr>
+  <tr><td>ミニボス</td><td class="num">+10</td><td class="num">+2</td></tr>
+  <tr><td>ティア1ボス</td><td class="num">+20</td><td class="num">—</td></tr>
+  <tr><td>ティア2ボス</td><td class="num">+50（強化上限+3）</td><td class="num">—</td></tr>
+  <tr><td>ティア3ボス</td><td class="num">+500（強化上限+6）</td><td class="num">—</td></tr>
+</table></div>
+<p>ほかにも、<b>階級が上がったとき</b>（下の表）と、<a href="challenge.html">全体チャレンジ</a> を達成したときにもらえます。</p>
+
+<h2 id="use">4. スコアの使い道</h2>
+<h3>(1) ステータス強化</h3>
+<p>本の「ステータス」を開き、項目名をクリックすると1つ上がります。必要なスコアは <b>今の値で増えていきます</b>。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>項目</th><th>1回で上がる量</th><th>必要スコア <span class="tag exact">確定</span></th><th>効果</th></tr>
+  <tr><td>呪力倍率</td><td>+1（＝最大呪力 +4%）</td><td class="mono">今の倍率÷3 ＋1</td><td>最大呪力が増える</td></tr>
+  <tr><td>呪力操作</td><td>+1</td><td class="mono">今の値÷2 ＋1</td><td>消費呪力と焼き切れが減る、式神やリカの体力が増える など</td></tr>
+  <tr><td>術式ダメージ</td><td>+1</td><td class="mono">今の値÷3 ＋1</td><td>技のダメージが上がる（消費も少し増える）</td></tr>
+  <tr><td>結界術</td><td>+1</td><td class="mono">今の値÷3 ＋1</td><td>領域展開・簡易領域が強くなる</td></tr>
+  <tr><td>攻撃力</td><td>+1（素手の攻撃力 +0.2）</td><td class="mono">今の値÷3 ＋1</td><td>近接攻撃が強くなる</td></tr>
+  <tr><td>ガードトークン</td><td>+10</td><td class="mono">今の値÷100 ＋1</td><td>ガード（スニーク）で受けられる量が増える</td></tr>
+  <tr><td>黒閃の核心</td><td>+1</td><td class="mono">今の値÷3 ＋1</td><td>黒閃が出やすくなる</td></tr>
+</table></div>
+<p>「÷」は小数点以下を切り捨てます。例：術式ダメージが5のとき、5÷3＝1 → 必要スコアは2。<br>
+基礎呪力と最大呪力はスコアでは上げられません（階級・ボス・宿儺の指で上がります）。</p>
+<div class="note warn"><b>強化上限</b>：強化できる回数には上限があります（最初は20回）。階級アップやボス討伐で上限が増えます。ステータス画面の「総強化数 ○/○」で確認できます。</div>
+
+<h3>(2) 技の解放（技術ツリー）</h3>
+<p>本の「技術ツリー表示」→「スキル1／2／3」をクリックすると、スコアを払って次の技を覚えます。必要なスコアは術式ごとのページにあります（<a href="gojo.html#tree">無下限</a>・<a href="rika.html#tree">リカ</a>・<a href="tokusa.html#tree">十種</a>）。</p>
+
+<h3>(3) 人殺しポイントの特典</h3>
+<p>ミニボス（日車・かしも など）を初めて倒すと <b>人殺しポイント</b> がもらえます（50〜150）。ステータス画面の「人殺しポイントを特典に交換」で、100ポイントずつ特典と交換できます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>共通の特典</th><th>無下限呪術</th><th>リカ</th></tr>
+  <tr><td>ジャストガードのガード量3倍</td><td>詠唱蒼の飛び道具レベル+1</td><td>リカの接続費用が30%の確率で発生しない</td></tr>
+  <tr><td>反転術式の再生時間2倍</td><td>赫の攻撃力2倍</td><td>純愛砲の接続時間の消費 −33%</td></tr>
+  <tr><td>焼き切れ治療の謎負担半減</td><td>詠唱紫の持続時間が伸びる</td><td>純愛砲がオートタレットになる</td></tr>
+  <tr><td>領域のプリセット+1</td><td>蒼ワープの焼き切れ半減・猶予2倍</td><td>純愛砲を途中で止められる・強い弾が増える</td></tr>
+</table></div>
+
+<h2 id="rank">5. 階級（呪術師のランク）</h2>
+<p>呪霊を倒すと <b>討伐ポイント</b> がたまり、条件を満たすと階級が上がります。<b>階級が上がると討伐ポイントは0に戻ります</b>（特別1級だけは戻りません）。つまり表の数字は「その階級になってから集める量」です。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>階級</th><th>条件</th><th>最大体力</th><th class="num">基礎呪力</th><th class="num">スコア</th><th class="num">強化上限</th><th class="num">呪力回復</th></tr>
+  <tr><td>4級呪術師</td><td>討伐30</td><td>40</td><td class="num">+500</td><td class="num">+10</td><td class="num">+5</td><td class="num">+2</td></tr>
+  <tr><td>3級呪術師</td><td>討伐60</td><td>60</td><td class="num">+500</td><td class="num">+15</td><td class="num">+5</td><td class="num">+2</td></tr>
+  <tr><td>準2級呪術師</td><td>討伐100・ボス討伐2以上</td><td>80</td><td class="num">+500</td><td class="num">+20</td><td class="num">+5</td><td class="num">+2</td></tr>
+  <tr><td>2級呪術師</td><td>討伐150・「さとる」を倒す</td><td>100</td><td class="num">+500</td><td class="num">+25</td><td class="num">+5</td><td class="num">+2</td></tr>
+  <tr><td>準1級呪術師</td><td>討伐200・ボス討伐5以上</td><td>120</td><td class="num">+1000</td><td class="num">+50</td><td class="num">+10</td><td class="num">+2</td></tr>
+  <tr><td>1級呪術師</td><td>討伐250・ボス討伐7以上</td><td>140</td><td class="num">+1000</td><td class="num">+60</td><td class="num">+10</td><td class="num">+2</td></tr>
+  <tr><td>特別1級呪術師</td><td>討伐300・ボス討伐9以上</td><td>160</td><td class="num">+1000</td><td class="num">+70</td><td class="num">+10</td><td class="num">+2</td></tr>
+  <tr><td>特級呪術師</td><td>討伐1000</td><td>200</td><td class="num">+2000</td><td class="num">+100</td><td class="num">+20</td><td class="num">+2</td></tr>
+</table></div>
+<p>階級が上がるたびに「TEMUギフト券」も1枚もらえます。階級が高いほど、強い等級の呪霊が出るようになります（<a href="curses.html#spawn">呪霊の出方</a>）。</p>
+
+<h2 id="boss">6. ボスとティア</h2>
+<p><b>4級呪術師</b> になると、ボスが出始めます（およそ1分ごとに抽選）。ボスは3つのティアに分かれています。</p>
+<ul>
+  <li><b>ティア1</b>：倒すとボス討伐ポイント+1。汚ールマイト・フィジギフ・さとる。</li>
+  <li><b>ティア2</b>：ティア1を倒すと出始める。倒すとボス討伐ポイント+2、<b>簡易領域</b>を覚える。はなみ・じょうご・まひと。</li>
+  <li><b>ティア3</b>：とても強いボス。五条悟（さとるを倒した後）・すっくん（宿儺の指20本）・めろんぱん（ミニボスを全部倒した後）。</li>
+</ul>
+<p>ボス討伐ポイントが <b>2以上</b>になると <a href="domain.html">領域展開</a> が使えるようになります。ボスごとの報酬は <a href="curses.html#boss">呪霊・ボスのページ</a>、技と倒し方は <a href="bosses.html">ボス攻略</a> にあります。おすすめの順番は <a href="strategy.html">攻略・おすすめ</a> へ。</p>
+
+<h2 id="death">7. 死んだとき</h2>
+<ul>
+  <li>持ち物はなくなりません（keepInventory）。</li>
+  <li><b>スコアが減ります</b>。残る割合は階級で変わります：4級まで90%、3級85%、準2級80%、2級75%、準1級70%、1級65%、特別1級60%、特級50%。<b>ボスに倒された</b>ときはさらに15%減ります。</li>
+  <li>欠けた手足（欠損）が1つ治ります。ガードトークンが満タンに戻ります。</li>
+</ul>
+
+<h2 id="other">8. その他の機能</h2>
+<h3>帳（とばり）</h3>
+<p>本の「帳を降ろす」から、呪力1000で帳を張れます。帳の中では、呪霊の湧き（拒絶・少し多め・多め）、ボスの湧き（拒絶・そのまま・多め・まだ倒していないボス）、呪霊の発光、呪霊の誘致を切り替えられます。設定ごとに帳が使う呪力が変わります。</p>
+<h3>宿儺の指</h3>
+<p>呪霊がまれに「指」を持っています。食べると全員が「指○本目」の進捗をもらい、<b>最大呪力+1000・呪力回復+1</b>。全部で20本あり、20本そろうとすっくんが出ます。</p>
+<h3>呪具</h3>
+<p>呪霊がまれに呪具（釈魂刀・遊雲・逆鉾 など）を持っています。<b>呪いの作業台</b>（お店で買える）でも、刀・黒刀・グローブ・鎧などを作れます。呪具で呪霊を叩くと、普通の攻撃が効きにくい呪霊にもダメージが入ります（<a href="curses.html#hit">くわしく</a>）。</p>
+</main>
+<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>
