@@ -11,33 +11,34 @@
 <main>
 <div class="hero">
   <h1>呪術廻戦 ver17 mod版 解説</h1>
-  <p>Minecraft 1.21.11（Fabric）用モッド「ver17（mod版）」の遊び方ガイドです。データパック ver17β をモッドにしたもので、キー操作・画面・呪具と防具・呪いの作業台・呪霊・ボスなどが新しくなりました。モッドのコードと設計図（数字の表）を読んでまとめています。</p>
+  <p>Minecraft 1.21.11（Fabric）用モッド「ver17（mod版）」の遊び方ガイドです。キーで技を出し、呪霊を倒して強くなり、ボスを倒していく遊び方を、モッドのコードと設計図（数字の表）からまとめています。</p>
 </div>
 
 <div class="note">
   <b>このサイトの数字について</b><br>
-  数字はモッドの設計図（<code>GrowthTable</code>・<code>JurTable</code>・<code>BossTable</code> など）とデータパック部分の命令から読み取ったものです。はっきり決まっている数字は <span class="tag exact">確定</span>、確率や敵の動きで変わる数字は <span class="tag est">目安</span>、まだ作っている途中・確かめきれていない所は <span class="tag wip">確認中</span> と書いています。<br>
+  数字はモッドの設計図（<code>GrowthTable</code>・<code>JurTable</code>・<code>BossTable</code> など）と命令ファイルから読み取ったものです。はっきり決まっている数字は <span class="tag exact">確定</span>、確率や敵の動きで変わる数字は <span class="tag est">目安</span>、まだ作っている途中・確かめきれていない所は <span class="tag wip">確認中</span> と書いています。<br>
   ダメージの「1」はハート半分です（ハート1個＝2）。時間の「tick」は 1/20秒です。
 </div>
 <div class="note warn">
-  <b>データパックと一緒に入れない</b>：ワールドに古いデータパック ver17β が入っていると、二重に動かないようにモッド側の処理が止まります（入ったときに赤い文字で知らせが出ます）。ワールドの <code>datapacks</code> フォルダから ver17β を外してください。
+  <b>データパック ver17β と一緒に入れない</b>：ワールドにデータパック ver17β が入っていると、二重に動かないようにモッド側の処理が止まります（入ったときに赤い文字で知らせが出ます）。ワールドの <code>datapacks</code> フォルダから ver17β を外してください。
 </div>
 
-<h2>データパック版から変わったこと</h2>
+<h2>このモッドでできること</h2>
 <div class="tbl-wrap"><table>
-  <tr><th>ところ</th><th>mod版</th><th>くわしく</th></tr>
+  <tr><th>ところ</th><th>中身</th><th>くわしく</th></tr>
   <tr><td>操作</td><td>技はキー（<kbd>R</kbd>・<kbd>C</kbd>・<kbd>Z</kbd>・<kbd>H</kbd>・<kbd>V</kbd>・<kbd>Y</kbd> など）で出せる。<kbd>R</kbd> 長押しで詠唱・溜め。設定で「術式アイテムで操作」にもできる</td><td><a href="controls.html">操作</a></td></tr>
   <tr><td>画面</td><td>呪力バー・焼き切れ／謎負担バー・照準の敵の体力・呪霊の頭の上の体力バー・術式防御力の六角形・技の説明（右下）</td><td><a href="screens.html">画面</a></td></tr>
-  <tr><td>ステータス画面</td><td>本のチャットではなく、4つのタブ（能力・特典・領域・情報）の画面に</td><td><a href="screens.html#status">画面</a></td></tr>
-  <tr><td>呪具と防具</td><td>呪具に「等級」（4級〜特級）と倍率。防具は4段階。<b>術式防御力</b>（1あたり3%軽減）</td><td><a href="gear.html">呪具・防具</a></td></tr>
-  <tr><td>呪いの作業台</td><td>本物のブロックになり、左にレシピの一覧。足りない素材の入手方法も見られる</td><td><a href="craft.html">作業台</a></td></tr>
-  <tr><td>四肢欠損</td><td>受けたダメージ÷4000 の確率で手足・目がもげる。もげると不利がつく</td><td><a href="gear.html#limbs">くわしく</a></td></tr>
-  <tr><td>呪霊</td><td>新しい呪霊13種（蠅頭・口裂け・吊り下がり・炎塊 など）。小さな領域・指持ちの中ボス</td><td><a href="curses.html">呪霊</a></td></tr>
-  <tr><td>ボス</td><td>全部作り直し。形態・予告つきの技・弱点。敵にも呪力・頭の負担・反転疲労。五条悟はティア0（獄門疆で封印）。最後に一億人呪霊</td><td><a href="bosses.html">ボス</a></td></tr>
-  <tr><td>術式</td><td>無下限が一本化（弾を止めて浮かせる）、新しい蒼ワープ、紫は2秒の溜め、乙骨の投射呪法が新しい操作に</td><td><a href="gojo.html">五条</a>・<a href="rika.html">乙骨</a></td></tr>
+  <tr><td>ステータス画面</td><td>5つのタブ（能力・特典・領域・情報・目標）の画面。帳も専用の画面で設定する</td><td><a href="screens.html#status">画面</a></td></tr>
+  <tr><td>呪具と防具</td><td>呪具に「等級」（4級〜特級・最上位）と倍率、刃物・鈍器の属性。防具は4段階。<b>術式防御力</b>（1あたり3%軽減）。5種類の飲み薬</td><td><a href="gear.html">呪具・防具</a></td></tr>
+  <tr><td>呪いの作業台</td><td>左にレシピの一覧。足りない素材の入手方法も見られる</td><td><a href="craft.html">作業台</a></td></tr>
+  <tr><td>四肢欠損</td><td>受けたダメージ÷5000 の確率で手足・目がもげる。もげると不利がつく</td><td><a href="gear.html#limbs">くわしく</a></td></tr>
+  <tr><td>呪霊</td><td>13種の呪霊（蠅頭・口裂け・吊り下がり・炎塊 など）。体力と術式防御は1体ずつばらつく。小さな領域・指持ちの中ボス</td><td><a href="curses.html">呪霊</a></td></tr>
+  <tr><td>ボス</td><td>形態・予告つきの技・弱点。敵にも呪力・頭の負担・反転疲労。五条悟はティア0（獄門疆で封印）。最後に一億人呪霊</td><td><a href="bosses.html">ボス</a></td></tr>
+  <tr><td>術式</td><td>無下限（弾を止めて浮かせる）、蒼ワープ、紫は2秒の溜め、乙骨の投射呪法と模倣術式（はぜのき・焦眉之赳）</td><td><a href="gojo.html">五条</a>・<a href="rika.html">乙骨</a></td></tr>
   <tr><td>シムリア星</td><td>ロケットで行く別の星。重力が軽く、シムリア星人5種と最強の術師ダブラ。星の本（防具のエンチャント）</td><td><a href="simuria.html">シムリア星</a></td></tr>
   <tr><td>地図</td><td>右上のミニマップと、持ち物画面の大きな地図（マーク・仲間へテレポート）</td><td><a href="map.html">地図</a></td></tr>
-  <tr><td>新しいボス</td><td>ネザーの禪院扇、作り直した直哉（ドブカス）と呪霊の直哉、ミニボス10体</td><td><a href="bosses.html#ogi">ボス</a></td></tr>
+  <tr><td>新しいボス</td><td>ネザーの禪院扇、直哉（ドブカス）と呪霊の直哉、ミニボス10体</td><td><a href="bosses.html#ogi">ボス</a></td></tr>
+  <tr><td>北海道コロニー</td><td>寒さゲージと吹雪。寒さを防ぐ薬や火で温まる</td><td><a href="world.html#hokkaido">そのほか</a></td></tr>
   <tr><td>そのほか</td><td>アクセサリー枠2つ、ふつうの畑、魔法の時計、ネザーの雰囲気、エンディング（もう一度見られる）、見た目（無下限の膜・帳・黒閃・式神の模型）、スポーンエッグ</td><td><a href="world.html">そのほか</a></td></tr>
 </table></div>
 
@@ -50,12 +51,12 @@
   <a class="card" href="guide.html"><h3>🔰 ゲームの進め方</h3><p>はじめ方、スコアの使い道、階級、ボスまでの流れ。</p></a>
   <a class="card" href="strategy.html"><h3>🗺️ 攻略・おすすめ</h3><p>術式の選び方、ステップごとのおすすめの進め方。</p></a>
   <a class="card" href="status.html"><h3>📊 ステータス・呪力</h3><p>呪力・焼き切れ・出力・反転術式・黒閃・攻撃力。</p></a>
-  <a class="card" href="gear.html"><h3>🗡️ 呪具・防具・守り</h3><p>呪具の等級と倍率、防具4段階、術式防御力、四肢欠損、素材の集め方。</p></a>
+  <a class="card" href="gear.html"><h3>🗡️ 呪具・防具・守り</h3><p>呪具の等級と倍率、刃物・鈍器、中華製と修理、防具4段階、薬、術式防御力、四肢欠損、素材の集め方。</p></a>
   <a class="card" href="craft.html"><h3>🛠️ 呪いの作業台</h3><p>レシピの一覧（素材・食べ物・防具・呪具）。</p></a>
   <a class="card" href="domain.html"><h3>🌀 領域展開</h3><p>領域の強さ・押し合い・簡易領域と、その見た目。</p></a>
   <a class="card" href="curses.html"><h3>👹 呪霊</h3><p>等級・種類・出る場所・技・小さな領域・報酬。</p></a>
   <a class="card" href="bosses.html"><h3>⚔️ ボス</h3><p>ティア0〜3と一億人呪霊。技・形態・弱点・報酬・敵味方。</p></a>
-  <a class="card" href="world.html"><h3>🌾 そのほか</h3><p>畑、魔法の時計、ネザー、エンディング。</p></a>
+  <a class="card" href="world.html"><h3>🌾 そのほか</h3><p>畑、魔法の時計、ネザー、北海道、エンディング。</p></a>
   <a class="card" href="sim.html"><h3>🧮 ダメージシミュレーター</h3><p>ステータスを入れると、技のダメージ・消費呪力・範囲が分かります。</p></a>
 </div>
 

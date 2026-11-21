@@ -32,7 +32,7 @@
   <li>帳「拒絶」の中（帳から60ブロック）には出ません。</li>
 </ul>
 <h3>出る等級 <span class="tag est">目安</span></h3>
-<p>出る等級は、そのワールドでいちばん階級の高い人で決まります（データパックと同じ）。</p>
+<p>出る等級は、そのワールドでいちばん階級の高い人で決まります。</p>
 <div class="tbl-wrap"><table>
   <tr><th>だれかの階級</th><th>出る等級</th></tr>
   <tr><td>まだ4級になっていない</td><td>4級だけ</td></tr>
@@ -58,16 +58,31 @@
 
 <h2 id="grade">等級ごとの強さと報酬 <span class="tag exact">確定</span></h2>
 <div class="tbl-wrap"><table>
-  <tr><th>等級（バーの色）</th><th class="num">体力</th><th class="num">攻撃力</th><th class="num">速さ</th><th class="num">スコア</th><th class="num">討伐pt</th><th>残穢／石</th></tr>
+  <tr><th>等級（バーの色）</th><th class="num">体力（基準）</th><th class="num">攻撃力</th><th class="num">速さ</th><th class="num">スコア</th><th class="num">討伐pt</th><th>残穢／石</th></tr>
   <tr><td>4級（緑）</td><td class="num">30</td><td class="num">3</td><td class="num">0.24</td><td class="num">1</td><td class="num">1</td><td>1／—</td></tr>
   <tr><td>3級（水色）</td><td class="num">60</td><td class="num">4</td><td class="num">0.25</td><td class="num">2</td><td class="num">1</td><td>1〜2／—</td></tr>
-  <tr><td>2級（黄）</td><td class="num">90</td><td class="num">5</td><td class="num">0.28</td><td class="num">3</td><td class="num">2</td><td>2〜3／30%</td></tr>
+  <tr><td>2級（黄）</td><td class="num">90</td><td class="num">5</td><td class="num">0.28</td><td class="num">3</td><td class="num">2</td><td>2〜3／15%</td></tr>
   <tr><td>1級（橙）</td><td class="num">150</td><td class="num">8</td><td class="num">0.32</td><td class="num">4</td><td class="num">3</td><td>3〜4／60%</td></tr>
-  <tr><td>特級（赤）</td><td class="num">200（10%ずつで300・400・500）</td><td class="num">15</td><td class="num">0.34</td><td class="num">8</td><td class="num">3</td><td>5〜6／100%</td></tr>
-  <tr><td>ネザー（紫）</td><td class="num">400（同じく500〜800）</td><td class="num">15</td><td class="num">0.37</td><td class="num">0</td><td class="num">6</td><td>3〜4／50%＋獄炎5%</td></tr>
+  <tr><td>特級（赤）</td><td class="num">250</td><td class="num">15</td><td class="num">0.34</td><td class="num">8</td><td class="num">3</td><td>5〜6／100%（2個）</td></tr>
+  <tr><td>ネザー（紫）</td><td class="num">600</td><td class="num">15</td><td class="num">0.37</td><td class="num">2</td><td class="num">6</td><td>3〜4／50%＋獄炎20%・特級呪核1%</td></tr>
 </table></div>
-<p>スコアと討伐ポイントは、倒した場所から25ブロック以内の全員がもらえます。術式持ちは少し速く、「デブ」（硬くて重い型）は体力と攻撃力が約2倍で遅くなります。防御力は等級ごとの乱数（特級 −10〜30 など）に、近くのプレイヤーの生存時間で上乗せがあります（最大30）。クリーパーの呪霊は等級が高いほど爆発が大きくなります（4級2 〜 特級14）。</p>
-<div class="note">データパックのときは呪霊に「術式防御」（4級8% 〜 ネザー80%）が付いていましたが、mod版では付いていません。</div>
+<p>スコアと討伐ポイントは、倒した場所から25ブロック以内の全員と、30秒以内にその呪霊へダメージを与えていた人（ログイン中・同じディメンション）がもらえます。術式持ちは少し速く、「デブ」（硬くて重い型）は体力と攻撃力が約2倍で遅くなります。防御力は等級ごとの乱数（特級 −10〜30 など）に、近くのプレイヤーの生存時間で上乗せがあります（最大30）。クリーパーの呪霊は等級が高いほど爆発が大きくなります（4級2 〜 特級14）。</p>
+<h3 id="vary">体力と術式防御のばらつき</h3>
+<p>同じ等級でも、1体ずつ体力と術式防御力がちがいます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>等級</th><th>体力（基準の何倍）</th><th>術式防御力</th></tr>
+  <tr><td>4級</td><td>ばらつかない</td><td>0〜1（10%で+1）</td></tr>
+  <tr><td>3級</td><td>×0.5〜1.5</td><td>0〜1（10%で+1）</td></tr>
+  <tr><td>2級</td><td>×0.5〜1.5</td><td>1〜3（10%で+2）</td></tr>
+  <tr><td>1級</td><td>×0〜2（いちばん低くても10）</td><td>2〜4（10%で+2）</td></tr>
+  <tr><td>特級</td><td>×0.8〜2</td><td>4〜9（10%で+3）</td></tr>
+  <tr><td>ネザー呪霊</td><td>×0.8〜2（5%で基準そのものが2倍）</td><td>10〜16（10%で+4）</td></tr>
+</table></div>
+<ul>
+  <li>基準は上の表の体力（「デブ」は2倍）。そこに種類の倍率がかかり、10の倍数にそろえます。難易度ハード以外では体力が <b>7割</b> です。</li>
+  <li>術式防御力の上乗せ：術式持ち+1・デブ+1・小さな領域を持つ+1・指持ち（中ボス）+2。上乗せがあっても、範囲の上限を2より多くは超えません。</li>
+  <li>術式防御力1あたり、術式のダメージが3%減ります（<a href="gear.html#jdef">術式防御力</a>）。</li>
+</ul>
 
 <h2 id="kinds">種類 <span class="tag exact">確定</span></h2>
 <p>前からいる呪霊（ゾンビ・スケルトン・クモ・クリーパー・ハスク・エンダーマンの体）に加えて、このモッドの呪霊が出ます。強さは「等級の強さ × 種類の倍率」です。</p>
@@ -115,7 +130,7 @@
 </ul>
 
 <h2 id="jut">術式持ち <span class="tag exact">確定</span></h2>
-<p>4級以外の呪霊は20%（平安の世界ではさらに+20%、生存時間などでも上乗せ）で術式を持ちます。ネザー呪霊は60%。術式持ちは頭の見た目が変わり、足元に術式の色の輪が出ます。乙骨はこういう呪霊を倒すと確率で術式を <b>模倣</b> できます（<a href="rika.html#mohou">模倣</a>）。</p>
+<p>4級以外の呪霊は20%（生存時間などで上乗せ）で術式を持ちます。ネザー呪霊は60%。術式持ちは頭の見た目が変わり、足元に術式の色の輪が出ます。乙骨はこういう呪霊を倒すと確率で術式を <b>模倣</b> できます（<a href="rika.html#mohou">模倣</a>）。</p>
 <div class="tbl-wrap"><table>
   <tr><th>術式</th><th>呪霊がしてくること</th></tr>
   <tr><td>ブギウギ</td><td>位置を入れ替える</td></tr>
@@ -160,14 +175,14 @@
 <p>4級以外の呪霊は「耐性」がとても高く、<b>普通の剣や素手ではほとんどダメージが入りません</b>（4級も80%カット）。</p>
 <ul>
   <li><b>術式の技</b>（蒼・赫・茈、里香、式神の攻撃など）… 耐性を無視します。</li>
-  <li><b>呪具</b> で叩く … 耐性を無視して入ります（<a href="gear.html#jugu">呪具</a>）。</li>
+  <li><b>呪具</b> で叩く … 耐性を通り抜けて、防御力などで減ったあとの量がそのまま入ります（<a href="gear.html#jugu">呪具</a>）。游雲なら1.5倍。</li>
   <li><b>肉体強化（出力Ⅱ以上）中の素手</b> … 呪具と同じく入ります。</li>
   <li><b>黒閃</b> … 全部入ります。</li>
 </ul>
 <p>戦闘中の1級・特級・ネザー呪霊は、ボスと同じ <a href="bosses.html#cheat">ズル対策</a>（埋まる・高い所から一方的に撃つ・水や溶岩で足止め、を防ぐ）が効いています。</p>
 
 <h2 id="mini-boss">ミニボス</h2>
-<p>ミニボスは mod版で作り直されました（技・初めて倒したときのアクセサリーは <a href="bosses.html#mini">ボスのページ</a>）。倒すとスコア+10・討伐ポイント+2、初めて倒すと <b>人殺しポイント</b>（特典と交換できる）。ボスバッグ（ミニボス）からアクセサリー1〜4が出ることがあります。</p>
+<p>ミニボスの強さ・技・出る場所は <a href="bosses.html#mini">ボスのページ</a> にあります。倒すとスコア+10・討伐ポイント+2、初めて倒すと <b>人殺しポイント</b>（特典と交換できる）。ボスバッグ（ミニボス）からアクセサリー1〜4が出ることがあります。</p>
 <div class="tbl-wrap"><table>
   <tr><th>ミニボス</th><th class="num">体力</th><th class="num">人殺しpt</th></tr>
   <tr><td>日車</td><td class="num">650</td><td class="num">150</td></tr>
@@ -181,7 +196,7 @@
   <tr><td>ヘリ男</td><td class="num">650</td><td class="num">50</td></tr>
   <tr><td>天使</td><td class="num">500</td><td class="num">50</td></tr>
 </table></div>
-<p>平安の世界には「ドブカス」（体力500）がいます。倒すと基礎呪力+1500・ガードトークン+300・強化上限+15。</p>
+<p>愛知コロニーには「ドブカス」（直哉、体力500）が出ます。倒すと基礎呪力+1500・ガードトークン+300・強化上限+15（<a href="bosses.html#naoya">くわしく</a>）。</p>
 </main>
 <footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
