@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>領域展開</title>
+<title>領域展開 - ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
 <h1>領域展開</h1>
 <p class="lead">自分のまわりに結界を作り、中の敵に術式を必ず当てる大技です。</p>
@@ -16,7 +16,7 @@
 <ul>
   <li><b>ボス討伐ポイント2以上</b>（ティア1ボス2体、またはティア2ボス1体）で「領域展開」の進捗がもらえ、使えるようになります。</li>
   <li>使うとき：呪力 <b>1500以上</b>、焼き切れ <b>500未満</b>、自分の領域がまだ出ていないこと。</li>
-  <li>選び方：無下限は技4、リカは技5、十種影法術は「領域」を選んで右クリック。</li>
+  <li>選び方：五条は技4、乙骨は技5、十種影法術は「領域」を選んで <kbd>R</kbd>（<kbd>L</kbd> でプリセットの切り替え）。</li>
 </ul>
 
 <h2>術式ごとの領域</h2>
@@ -57,14 +57,29 @@
 <h2 id="kani">簡易領域</h2>
 <ul>
   <li><b>ティア2ボスを1体でも倒す</b>と使えます。</li>
-  <li><b>本を右手に持って、スニーク＋左クリック</b>。呪力1000（六眼なら200）。</li>
+  <li><kbd>V</kbd> キー（前は「本を右手に持って、スニーク＋左クリック」）。呪力1000（六眼なら200）。</li>
   <li>相手の領域の必中を防ぎます。強さは <b>結界術 × 2</b>。相手の領域が押してくるたびに、その押し合いの強さ×4ずつ削られます。</li>
 </ul>
 
-<h2>敵の領域</h2>
-<p>ボス（はなみ・じょうご・まひと・五条悟・すっくん・めろんぱん など）や、一部の呪霊も領域を使います。肉体強化（出力Ⅲ）や簡易領域、自分の領域で対抗しましょう。</p>
+<h2 id="look">領域の見た目 <span class="tag new">mod版</span></h2>
+<ul>
+  <li><b>領域</b>：結界の壁（半透明の球）が見えます。中に入ると球の内側が濃くなり、空や景色の色が変わります（無量空処は星空）。</li>
+  <li><b>押し合い</b>：2つの球が重なる線に、バチバチ光る輪と火花。壁もはげしく脈打ちます。</li>
+  <li><b>簡易領域</b>：足元に回る結界の円（残りが減ると小さく・薄くなる）と、うすい膜（必中を防ぐと波打って光る）。</li>
+  <li>プレイヤーの領域も敵の領域も同じように見えます。ボスの閉じた領域には、データパックと同じ赤紫のガラスの壁（半径18）も立ちます。</li>
+  <li><b>壁のない領域の目印</b>：中心に地面からせり上がる（伏魔御廚子＝牙の並んだ口と赤い目の社と骨の山、胎蔵遍野＝ねじれた肉の柱とうごめく手、ほか＝色の光の柱と回る紋様）。終わると崩れて沈む。</li>
+</ul>
+
+<h2 id="enemy">敵の領域</h2>
+<ul>
+  <li><b>ボス</b>：ティア2（はなみ・じょうご・まひと）・五条悟・めろんぱん・すっくん（伏魔御廚子）・一億人呪霊が使います。こちらが領域を開くと使い返してくることがあります（<a href="bosses.html">ボス</a>）。さとるの無量空処は難易度ハードのときだけ1回。</li>
+  <li><b>すっくんの伏魔御廚子</b>は壁のない領域で、簡易領域を張っていれば斬撃が完全に当たりません。地形を切り崩す斬撃も走ります。</li>
+  <li><b>呪霊の直哉の時胞月宮殿</b>：中で動くと、動いた分だけ切り刻まれる。<b>ダブラの領域</b>：光の刃の必中（<a href="simuria.html#dabura">シムリア星</a>）。</li>
+  <li><b>呪霊の小さな領域</b>：特級は必ず、1級・ネザー呪霊はときどき。半径8で必中、簡易領域で防げます（結界喰いだけは削ってくる。<a href="curses.html#mini">くわしく</a>）。</li>
+  <li>相手の領域の中では、無下限も中和されます（簡易領域を張っていれば中和されない）。</li>
+</ul>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>畑・時計・ネザー・エンディング - ver17 mod版 解説</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
+<main>
+<h1>畑・時計・ネザー・エンディング</h1>
+<p class="lead">戦い以外の、mod版で新しくなったところです。</p>
+<p class="toc"><a href="#farm">畑</a><a href="#clock">魔法の時計</a><a href="#nether">ネザー</a><a href="#look">見た目</a><a href="#egg">スポーンエッグ</a><a href="#ending">エンディング</a><a href="simuria.html">シムリア星</a></p>
+
+<h2 id="farm">畑 <span class="tag exact">確定</span></h2>
+<p>くだものは「ふつうの畑」で育てます（前の見えないゴーレムの作物は、読み込まれたときに畑の作物へ置きかわります）。</p>
+<ol class="steps">
+  <li>くわで耕した土の上面に、種（いちごの種・みかんの種・パインの種・メロンの種）を <b>右クリック</b> で植えます。</li>
+  <li>およそ <b>1分ごとに1段</b> 育ちます。雨（雷なし）のときは2段。</li>
+  <li>育ちきったら壊すと収穫。途中で壊すと種が1つ戻ります。</li>
+</ol>
+<div class="tbl-wrap"><table>
+  <tr><th>作物</th><th class="num">段の数</th><th class="num">育ちきるまで（晴れ）</th></tr>
+  <tr><td>いちご</td><td class="num">4</td><td class="num">約4分</td></tr>
+  <tr><td>みかん</td><td class="num">7</td><td class="num">約7分</td></tr>
+  <tr><td>パイン</td><td class="num">12</td><td class="num">約12分</td></tr>
+  <tr><td>メロン</td><td class="num">20</td><td class="num">約20分</td></tr>
+</table></div>
+<p><b>骨粉</b>：右クリックで18%の確率で1段育ちます。前の「しゃがんで骨粉」も作物に効きます。くだものはグルコースやグロリーメイトの材料になります（<a href="craft.html#material">作業台</a>）。種は食べられなくなりました（長押しで食べる動きは止めました）。</p>
+
+<h2 id="clock">魔法の時計 <span class="tag exact">確定</span></h2>
+<ul>
+  <li>使うと1個なくなり、<b>夜（時刻13000）</b> になります。夜は呪霊が出やすくなります（<a href="curses.html#spawn">呪霊の出方</a>）。</li>
+  <li>作り方：呪いの作業台で <b>ラピスラズリ4＋鉄インゴット1</b>（並べ方自由）。16個まで重ねられます。</li>
+</ul>
+
+<h2 id="nether">ネザーの雰囲気</h2>
+<p>画面の見た目と音だけで、敵やしくみは変わりません。</p>
+<ul>
+  <li>霧が少し濃く赤黒くなり、溶岩の明かりのように明るさがゆっくりゆらぐ。</li>
+  <li>灰が舞い、火の粉がふわっと昇る。近くの溶岩の上でははじける火の粉。</li>
+  <li>遠くで地鳴り・ガストのうめき・溶岩・炎の音がときどき鳴る（音量は「環境」）。</li>
+  <li>画面のふちが熱でほんのり赤くゆらぐ。</li>
+  <li>ネザーのBGMに2曲増えました（ほかのネザーの曲と同じくらいの音量）。</li>
+</ul>
+<p>ネザーの呪霊は数が減ったかわりに一体ずつが強くなっています（<a href="curses.html#nether">ネザー呪霊</a>）。</p>
+
+<h2 id="look">見た目 <span class="tag new">mod版</span></h2>
+<p>見た目だけの変更です（確率・ダメージ・中身は変わりません）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>もの</th><th>見た目</th></tr>
+  <tr><td>無下限</td><td>止まる距離（3.5ブロック）に、ごく薄い半透明の球（だれにでも見える。自分のは一人称では光る帯だけ）。何かが止まるとその場所から波紋。中和・破られると割れてかけらが飛び、自分で解くと薄れて消える。近づく相手は押し返さず、手前で止めるだけ</td></tr>
+  <tr><td>帳</td><td>てっぺんから黒い墨が流れ落ちるように膜が降りる。外からは中がほとんど見えず、中からは膜が少し透けて空が暗い。上がるときはまだらに穴が開いて溶ける</td></tr>
+  <tr><td>黒閃</td><td>当たった所から赤い縁の黒い稲妻が何本も走り、赤い衝撃の輪が広がる。打った人と近くの人は画面が一瞬ゆがみ、ふちが黒と赤にかげる（設定の「画面のゆがみ」が小さいと弱い）。ボスの黒閃も同じ</td></tr>
+  <tr><td>身体強化</td><td>体のまわりに揺らめく青白〜紫の炎（出力が高いほど多く濃い）。領域展延は体に沿う薄い膜。自分の一人称では手元に薄い炎だけ</td></tr>
+  <tr><td>式神・里香</td><td>玉犬（白・黒）・蝦蟇・大蛇・満象・円鹿・貫牛・魔虚羅・里香が3Dの模型に。脱兎は新しい体。<b>自分や仲間の攻撃・悪い効果・矢は式神に当たらない</b></td></tr>
+  <tr><td>鵺</td><td>新しい体の鵺（乗れる怪鳥）。地面から40ブロックまで上がれる。降りたあとはゆっくり落ちる。前の鵺は影に戻して出し直すと新しい体になる</td></tr>
+  <tr><td>敵の反転術式</td><td>白と金の2本の渦・足元の光・治った部位へ集まる光、体力バーが一瞬白く光る</td></tr>
+  <tr><td>五条悟の蒼</td><td>弾を操るとき、弾のまわりに青い渦と、手から弾への青い粒の帯</td></tr>
+  <tr><td>領域</td><td>ボスの閉じた領域は赤紫のガラスの壁、壁のない領域は中心に目印（<a href="domain.html#look">領域</a>）</td></tr>
+</table></div>
+
+<h2 id="egg">スポーンエッグ・創造モードのタブ</h2>
+<ul>
+  <li>創造モードのタブ「<b>呪霊とボス</b>」に、呪霊・ボス・ミニボス・ドブカス・ダブラ・シムリア星人のスポーンエッグがあります（混沌と調和の双子は2体で1つのエッグ）。ボスはその場所で、使った人の方を向いて出ます。ディメンションやほかのボスの有無は見ません。スポナーには入れられません。</li>
+  <li>タブ「<b>呪具と防具</b>」に呪具・防具・素材・<b>呪胎の核</b>・<b>蒼い目</b>（六眼）、タブ「<b>シムリア星</b>」に星のブロックと素材。</li>
+</ul>
+
+<h2 id="ending">エンディング</h2>
+<p><a href="bosses.html#oku">一億人呪霊</a> を <b>はじめて</b> 倒すと、エンディングが始まります（2回目からは始まりません）。</p>
+<ul>
+  <li>専用の曲（約3分42秒）が終わるまで続きます。その間、ほかのBGMは止まります。</li>
+  <li>敵（敵対モブ・呪霊・ボス・弾）は消え、新しく出てきたものもすぐ消えます。プレイヤーは守られます。仲間の式神・里香などは消えません。</li>
+  <li>光の柱・花火・金色の粒、空が夜から朝へ、黒い帯・語り・流れる文字。</li>
+  <li>最後に「ver17β クリア／遊んでくれてありがとう」と案内が出ます。</li>
+  <li>報酬（一億人呪霊のバッグ・進捗）はエンディングとは別に、倒した時にもらえます。</li>
+  <li>エンディング中は画面の左に、このモッドの <b>モブの紹介</b>（名前・姿・ステータス・出る場所）が順番に出ます。</li>
+</ul>
+<h3>もう一度見る</h3>
+<ul>
+  <li>一億人呪霊を倒した人は、<kbd>Y</kbd> のメニューの「<b>エンディングをもう一度見る</b>」で、ひとりで見直せます。止めるときは「エンディングを止める」。</li>
+  <li>見直しはその人にだけ：敵は消えず（そのかわり見ている間は守られる）、止まるBGMもその人の分だけ、花火などもその人にだけ見える粒。報酬・進捗は出ません。</li>
+</ul>
+</main>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

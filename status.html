@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ステータスと呪力</title>
+<title>ステータスと呪力 - ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
 <h1>ステータスと呪力のしくみ</h1>
 <p class="lead">どの術式でも共通の仕組みです。</p>
-<p class="toc"><a href="#stats">ステータス一覧</a><a href="#ju">呪力と最大呪力</a><a href="#cost">消費呪力の計算</a><a href="#burn">焼き切れ・謎負担</a><a href="#out">出力</a><a href="#body">肉体強化</a><a href="#guard">ガード</a><a href="#hanten">反転術式</a><a href="#koku">黒閃</a><a href="#loss">欠損</a></p>
+<p class="toc"><a href="#stats">ステータス一覧</a><a href="#ju">呪力と最大呪力</a><a href="#cost">消費呪力の計算</a><a href="#burn">焼き切れ・謎負担</a><a href="#out">出力</a><a href="#boost">肉体強化</a><a href="#guard">ガード</a><a href="#hanten">反転術式</a><a href="#koku">黒閃</a><a href="#loss">欠損</a></p>
 
 <h2 id="stats">ステータス一覧</h2>
 <div class="tbl-wrap"><table>
@@ -22,10 +22,10 @@
   <tr><td><b>呪力操作</b></td><td>0</td><td>消費呪力が減る・焼き切れが減る・反転術式で呪力が戻る・式神／リカの体力・蒼の持続 など。</td></tr>
   <tr><td><b>術式ダメージ</b></td><td>5</td><td>ほとんどの技のダメージ。ただし消費呪力も少し増える。</td></tr>
   <tr><td><b>結界術</b></td><td>0</td><td>領域展開の体力・押し合い・長さ、簡易領域の強さ。</td></tr>
-  <tr><td><b>攻撃力</b></td><td>5</td><td>素手の攻撃力 ＝ 攻撃力×0.2（5以下なら1）。黒閃やリカの技にも使う。</td></tr>
+  <tr><td><b>攻撃力</b></td><td>5</td><td>素の攻撃力 ＝ 攻撃力×0.4（5以下なら1）。呪具を持つと等級の倍率がかかる（<a href="gear.html#atk">くわしく</a>）。黒閃や里香の技にも使う。</td></tr>
   <tr><td><b>ガードトークン</b></td><td>300</td><td>スニークでガードできる量。</td></tr>
   <tr><td><b>黒閃の核心</b></td><td>1</td><td>黒閃が出る確率。</td></tr>
-  <tr><td><b>出力</b></td><td>Ⅰ</td><td>技の強さの段階（Ⅰ〜Ⅲ）。本を持って左クリックで切り替え。</td></tr>
+  <tr><td><b>出力</b></td><td>Ⅰ</td><td>技の強さの段階（Ⅰ〜Ⅲ）。<kbd>Z</kbd> で切り替え。</td></tr>
 </table></div>
 
 <h2 id="ju">呪力と最大呪力</h2>
@@ -59,11 +59,11 @@
 <p>本の「インスタント焼き切れ回復」をONにすると、焼き切れで技が出せないときに自動でこの治療をします。</p>
 
 <h2 id="out">出力（Ⅰ・Ⅱ・Ⅲ）</h2>
-<p><b>本を右手に持って左クリック</b>で、出力がⅠ→Ⅱ→Ⅲ→Ⅰと変わります。出力が高いほど技が大きく強くなりますが、消費も増えます。技ごとに「出力Ⅱ・Ⅲは技術ツリーで解放が必要」なものがあります。</p>
+<p><kbd>Z</kbd> キー（前は「本を右手に持って左クリック」）で、出力がⅠ→Ⅱ→Ⅲ→Ⅰと変わります。出力が高いほど技が大きく強くなりますが、消費も増えます。技ごとに「出力Ⅱ・Ⅲは技術ツリーで解放が必要」なものがあります。</p>
 <p>十種影法術では、出力Ⅰは消費と式神の強さが半分、出力Ⅲは消費1.5倍・強さ1.8倍になります。</p>
 
-<h2 id="body">呪力による肉体強化</h2>
-<p>術式アイテムを持って <b>ダブルスニーク</b>（すばやく2回しゃがむ）でON／OFF。ONの間は0.5秒ごとに呪力を使います。</p>
+<h2 id="boost">呪力による肉体強化</h2>
+<p><kbd>J</kbd> キーでON／OFF（前は「術式アイテムを持ってダブルスニーク」）。ONの間は0.5秒ごとに呪力を使います。</p>
 <div class="tbl-wrap"><table>
   <tr><th>出力</th><th class="num">呪力（0.5秒ごと）</th><th>効果</th></tr>
   <tr><td>Ⅰ</td><td class="num">3</td><td>力Ⅰ・移動速度Ⅰ・ガードトークンが早く回復</td></tr>
@@ -83,8 +83,8 @@
 <p>回復の技です。<b>無下限は技5</b>、<b>リカは技6</b>、<b>十種影法術は「反転術式」</b>を選んで使います。</p>
 <div class="tbl-wrap"><table>
   <tr><th>使い方</th><th>効果</th></tr>
-  <tr><td>右手に術式アイテムで使う</td><td>再生Ⅲ（5秒）＋即時回復Ⅲ、欠損を全部治す、ガードトークン満タン、衰弱を消す</td></tr>
-  <tr><td>左手に術式アイテムで使う</td><td>焼き切れ −150（<a href="#burn">焼き切れの治療</a>）</td></tr>
+  <tr><td><kbd>H</kbd>（右手に術式アイテムで使う）</td><td>再生Ⅲ（5秒）＋即時回復Ⅲ、欠損を全部治す、ガードトークン満タン、衰弱を消す</td></tr>
+  <tr><td><kbd>シフト</kbd>＋<kbd>H</kbd>（左手に術式アイテムで使う）</td><td>焼き切れ −150（<a href="#burn">焼き切れの治療</a>）</td></tr>
   <tr><td>左クリック（反転を選んで）</td><td>目の前の生き物に反転術式を流して回復させる</td></tr>
 </table></div>
 <div class="formula">実際に減る呪力 ＝ 1500 − 呪力操作（呪力操作ぶん戻ってくる。最大1499）</div>
@@ -106,9 +106,11 @@
 </ul>
 
 <h2 id="loss">欠損（手足・目）</h2>
-<p>一度に大きなダメージ（8以上）を受けると、まれに手足や目を失います。呪言「捻れろ」などでも起こります。反転術式、お店の絆創膏、死亡で治ります。</p>
+<p>mod版では、受けたダメージ（防具や術式防御で減ったあと）で <b>部位ごとに「ダメージ÷4000」の確率</b> でもげます（100ダメージで各部位2.5%）。もげると足は移動・ジャンプ、手は攻撃力（その手に物を持てない）、目は画面の暗さに不利がつきます。呪言「捻れろ」などでも起こります。反転術式（全部治る）、お店の絆創膏、死亡で治ります。くわしくは <a href="gear.html#limbs">四肢欠損</a>。</p>
+<h2 id="jdef">術式防御力</h2>
+<p>術式のダメージだけを減らす守りです。1ポイントで3%（上限80%）。防具から付きます。くわしくは <a href="gear.html#jdef">術式防御力</a>。</p>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>

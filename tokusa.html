@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>十種影法術</title>
+<title>十種影法術 - ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
 <h1 class="c-tokusa">十種影法術</h1>
 <p class="lead">影から式神を呼んで戦う術式。式神は戦うほどレベルが上がり、休ませると気力がたまり、2体を合体させることもできます。</p>
@@ -15,21 +15,24 @@
 <p><a href="sim.html?t=tokusa">→ シミュレーターで自分のステータスの数字を見る</a></p>
 
 <h2 id="ctrl">操作</h2>
+<p>キーでの操作です。全体は <a href="controls.html">操作</a> のページへ。</p>
 <div class="tbl-wrap"><table>
-  <tr><th>持ち方</th><th>操作</th><th>すること</th></tr>
-  <tr><td rowspan="6">右手</td><td><kbd>右クリック</kbd></td><td>選んでいる式神を呼ぶ／もう一度でしまう</td></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>右クリック</kbd></td><td>次の技へ</td></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>左クリック</kbd></td><td>前の技へ</td></tr>
-  <tr><td><kbd>左クリック</kbd></td><td>見ている敵を式神に攻撃させる／蝦蟇なら舌、鵺なら雷／<b>自分の式神を叩くと影に戻す</b></td></tr>
-  <tr><td><kbd>スニーク3秒</kbd>→<kbd>スニーク</kbd>＋<kbd>右クリック</kbd></td><td>遠隔召喚（見ている場所に出す。出ている式神は呼び寄せる）</td></tr>
-  <tr><td><kbd>ダブルスニーク</kbd></td><td>呪力による肉体強化 ON／OFF</td></tr>
-  <tr><td rowspan="4">左手</td><td><kbd>右クリック</kbd></td><td>影の収納（右手の物をしまう／何も持っていなければ取り出す）</td></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>右クリック</kbd></td><td>一斉召喚（印を付けた式神をまとめて呼ぶ）</td></tr>
-  <tr><td><kbd>スニーク長押し</kbd></td><td>出ている式神を呼び戻す</td></tr>
-  <tr><td><kbd>ダブルスニーク</kbd></td><td>影の収納の番号（1〜9）を変える</td></tr>
+  <tr><th>キー</th><th>すること</th></tr>
+  <tr><td><kbd>R</kbd></td><td>選んでいる式神を使う（呼ぶ／もう一度でしまう）</td></tr>
+  <tr><td><kbd>C</kbd> ／ <kbd>シフト</kbd>＋<kbd>C</kbd></td><td>選ぶ式神を次へ ／ 前へ</td></tr>
+  <tr><td><kbd>ダッシュ</kbd>＋<kbd>R</kbd></td><td>影の収納（右手の物をしまう／何も持っていなければ取り出す）</td></tr>
+  <tr><td><kbd>シフト</kbd>＋<kbd>R</kbd></td><td>一斉召喚（印を付けた式神をまとめて呼ぶ）</td></tr>
+  <tr><td><kbd>L</kbd>（またはダブルシフト）</td><td>影の式神の切り替え（影の収納の番号）</td></tr>
+  <tr><td><kbd>H</kbd></td><td>十種の反転術式</td></tr>
+  <tr><td><kbd>J</kbd></td><td>呪力による身体強化 オン／オフ</td></tr>
+  <tr><td><kbd>Z</kbd>・<kbd>V</kbd></td><td>出力の切り替え・簡易領域</td></tr>
+  <tr><td>左クリック</td><td>見ている敵を式神に攻撃させる／蝦蟇なら舌、鵺なら雷／自分の式神を叩くと影に戻す（データパックのまま）</td></tr>
 </table></div>
+<p>遠隔召喚（見ている場所に出す）・式神の呼び戻しは、データパックのときはスニークの長押しでした。mod版でのやり方は <span class="tag wip">確認中</span> です。</p>
 <p>技の番号：1 玉犬 ／ 2 蝦蟇 ／ 3 鵺 ／ 4 脱兎 ／ 5 大蛇 ／ 6 円鹿 ／ 7 貫牛 ／ 8 満象 ／ 9 魔虚羅 ／ 10 嵌合暗翳庭（領域） ／ 11 反転術式。まだ使えない技は飛ばされます。</p>
-<p>本の「アビリティ1」で <b>式神一覧</b>（レベル・体力・攻撃・覚えた技・合体）が見られます。一覧の［一斉召喚］［行動範囲：近／中／遠］はクリックで切り替えられます。</p>
+<p><kbd>Y</kbd> の「アビリティ1」で <b>式神一覧</b>（レベル・体力・攻撃・覚えた技・合体）が見られます。一覧の［一斉召喚］［行動範囲：近／中／遠］はクリックで切り替えられます。</p>
+
+<div class="note">mod版では式神が3Dの模型になり、鵺は乗れる新しい体（地面から40ブロックまで）になりました。自分や仲間の攻撃・悪い効果・矢は式神に当たりません（<a href="world.html#look">見た目</a>）。</div>
 
 <h2 id="tree">技術ツリー（スコアで解放）</h2>
 <div class="tbl-wrap"><table>
@@ -164,7 +167,7 @@
   <li>チャレンジ「式神で敵を15体倒す」「式神のレベルを1つ上げる」は十種影法術の人だけに出ます（<a href="challenge.html">チャレンジ</a>）。</li>
 </ul>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>

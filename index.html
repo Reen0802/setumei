@@ -3,52 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ver17β 解説</title>
+<title>ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
 <div class="hero">
-  <h1>呪術廻戦データパック ver17β 解説</h1>
-  <p>Minecraft 1.21.11 用データパック「ver17β」の遊び方ガイドです。術式の選び方、ステータスの上げ方、呪霊やボス、領域展開、そして3つの術式の技まで、データパックの中身（mcfunction）を読んでまとめました。</p>
+  <h1>呪術廻戦 ver17 mod版 解説</h1>
+  <p>Minecraft 1.21.11（Fabric）用モッド「ver17（mod版）」の遊び方ガイドです。データパック ver17β をモッドにしたもので、キー操作・画面・呪具と防具・呪いの作業台・呪霊・ボスなどが新しくなりました。モッドのコードと設計図（数字の表）を読んでまとめています。</p>
 </div>
 
 <div class="note">
   <b>このサイトの数字について</b><br>
-  数字はデータパックの命令から読み取ったものです。命令からはっきり計算できる数字は <span class="tag exact">確定</span>、確率や敵の動きで変わる数字は <span class="tag est">目安</span> と書いています。<br>
-  ダメージの「1」はハート半分です（ハート1個＝2）。
+  数字はモッドの設計図（<code>GrowthTable</code>・<code>JurTable</code>・<code>BossTable</code> など）とデータパック部分の命令から読み取ったものです。はっきり決まっている数字は <span class="tag exact">確定</span>、確率や敵の動きで変わる数字は <span class="tag est">目安</span>、まだ作っている途中・確かめきれていない所は <span class="tag wip">確認中</span> と書いています。<br>
+  ダメージの「1」はハート半分です（ハート1個＝2）。時間の「tick」は 1/20秒です。
 </div>
+<div class="note warn">
+  <b>データパックと一緒に入れない</b>：ワールドに古いデータパック ver17β が入っていると、二重に動かないようにモッド側の処理が止まります（入ったときに赤い文字で知らせが出ます）。ワールドの <code>datapacks</code> フォルダから ver17β を外してください。
+</div>
+
+<h2>データパック版から変わったこと</h2>
+<div class="tbl-wrap"><table>
+  <tr><th>ところ</th><th>mod版</th><th>くわしく</th></tr>
+  <tr><td>操作</td><td>技はキー（<kbd>R</kbd>・<kbd>C</kbd>・<kbd>Z</kbd>・<kbd>H</kbd>・<kbd>V</kbd>・<kbd>Y</kbd> など）で出せる。<kbd>R</kbd> 長押しで詠唱・溜め。設定で「術式アイテムで操作」にもできる</td><td><a href="controls.html">操作</a></td></tr>
+  <tr><td>画面</td><td>呪力バー・焼き切れ／謎負担バー・照準の敵の体力・呪霊の頭の上の体力バー・術式防御力の六角形・技の説明（右下）</td><td><a href="screens.html">画面</a></td></tr>
+  <tr><td>ステータス画面</td><td>本のチャットではなく、4つのタブ（能力・特典・領域・情報）の画面に</td><td><a href="screens.html#status">画面</a></td></tr>
+  <tr><td>呪具と防具</td><td>呪具に「等級」（4級〜特級）と倍率。防具は4段階。<b>術式防御力</b>（1あたり3%軽減）</td><td><a href="gear.html">呪具・防具</a></td></tr>
+  <tr><td>呪いの作業台</td><td>本物のブロックになり、左にレシピの一覧。足りない素材の入手方法も見られる</td><td><a href="craft.html">作業台</a></td></tr>
+  <tr><td>四肢欠損</td><td>受けたダメージ÷4000 の確率で手足・目がもげる。もげると不利がつく</td><td><a href="gear.html#limbs">くわしく</a></td></tr>
+  <tr><td>呪霊</td><td>新しい呪霊13種（蠅頭・口裂け・吊り下がり・炎塊 など）。小さな領域・指持ちの中ボス</td><td><a href="curses.html">呪霊</a></td></tr>
+  <tr><td>ボス</td><td>全部作り直し。形態・予告つきの技・弱点。敵にも呪力・頭の負担・反転疲労。五条悟はティア0（獄門疆で封印）。最後に一億人呪霊</td><td><a href="bosses.html">ボス</a></td></tr>
+  <tr><td>術式</td><td>無下限が一本化（弾を止めて浮かせる）、新しい蒼ワープ、紫は2秒の溜め、乙骨の投射呪法が新しい操作に</td><td><a href="gojo.html">五条</a>・<a href="rika.html">乙骨</a></td></tr>
+  <tr><td>シムリア星</td><td>ロケットで行く別の星。重力が軽く、シムリア星人5種と最強の術師ダブラ。星の本（防具のエンチャント）</td><td><a href="simuria.html">シムリア星</a></td></tr>
+  <tr><td>地図</td><td>右上のミニマップと、持ち物画面の大きな地図（マーク・仲間へテレポート）</td><td><a href="map.html">地図</a></td></tr>
+  <tr><td>新しいボス</td><td>ネザーの禪院扇、作り直した直哉（ドブカス）と呪霊の直哉、ミニボス10体</td><td><a href="bosses.html#ogi">ボス</a></td></tr>
+  <tr><td>そのほか</td><td>アクセサリー枠2つ、ふつうの畑、魔法の時計、ネザーの雰囲気、エンディング（もう一度見られる）、見た目（無下限の膜・帳・黒閃・式神の模型）、スポーンエッグ</td><td><a href="world.html">そのほか</a></td></tr>
+</table></div>
 
 <h2>まずはここから</h2>
 <div class="grid">
-  <a class="card" href="guide.html"><h3>🔰 ゲームの進め方</h3><p>はじめ方、術式の選び方、スコアの使い道、階級、ボスまでの流れ。</p></a>
-  <a class="card" href="strategy.html"><h3>🗺️ 攻略・おすすめ</h3><p>術式の選び方、スコアの使い方、ステップごとのおすすめの進め方。</p></a>
-  <a class="card" href="bosses.html"><h3>⚔️ ボス攻略</h3><p>ボスごとの技・領域・倒し方のコツ。すっくんの「適応」も。</p></a>
-  <a class="card" href="status.html"><h3>📊 ステータス・呪力</h3><p>呪力量・呪力操作・術式ダメージ・出力、焼き切れ、反転術式、黒閃など。</p></a>
-  <a class="card" href="domain.html"><h3>🌀 領域展開</h3><p>領域の体力・押し合い・長さの計算と、簡易領域。</p></a>
-  <a class="card" href="curses.html"><h3>👹 呪霊・ボス</h3><p>呪霊の等級ごとの強さと報酬、術式防御、ボスとミニボスの一覧。</p></a>
-  <a class="card" href="challenge.html"><h3>📅 全体チャレンジ</h3><p>1日1つ出るお題と、その報酬。</p></a>
-  <a class="card" href="sim.html"><h3>🧮 ダメージシミュレーター</h3><p>ステータスを入れると、技のダメージ・消費呪力・範囲がすぐ分かります。</p></a>
+  <a class="card" href="controls.html"><h3>⌨️ 操作（キー）</h3><p>R・Z・C・H・V・Y・J・K・L。術式ごとの R の使い分け。</p></a>
+  <a class="card" href="screens.html"><h3>🖥️ 画面の見かた</h3><p>呪力バー、照準の敵、ステータス画面の4タブ、アクセサリー枠、音量。</p></a>
+  <a class="card" href="map.html"><h3>🗺️ 地図</h3><p>ミニマップ・持ち物画面の地図・マーク・仲間へテレポート。</p></a>
+  <a class="card" href="simuria.html"><h3>🚀 シムリア星</h3><p>ロケット・重力・シムリア星人・ダブラ・星の本。</p></a>
+  <a class="card" href="guide.html"><h3>🔰 ゲームの進め方</h3><p>はじめ方、スコアの使い道、階級、ボスまでの流れ。</p></a>
+  <a class="card" href="strategy.html"><h3>🗺️ 攻略・おすすめ</h3><p>術式の選び方、ステップごとのおすすめの進め方。</p></a>
+  <a class="card" href="status.html"><h3>📊 ステータス・呪力</h3><p>呪力・焼き切れ・出力・反転術式・黒閃・攻撃力。</p></a>
+  <a class="card" href="gear.html"><h3>🗡️ 呪具・防具・守り</h3><p>呪具の等級と倍率、防具4段階、術式防御力、四肢欠損、素材の集め方。</p></a>
+  <a class="card" href="craft.html"><h3>🛠️ 呪いの作業台</h3><p>レシピの一覧（素材・食べ物・防具・呪具）。</p></a>
+  <a class="card" href="domain.html"><h3>🌀 領域展開</h3><p>領域の強さ・押し合い・簡易領域と、その見た目。</p></a>
+  <a class="card" href="curses.html"><h3>👹 呪霊</h3><p>等級・種類・出る場所・技・小さな領域・報酬。</p></a>
+  <a class="card" href="bosses.html"><h3>⚔️ ボス</h3><p>ティア0〜3と一億人呪霊。技・形態・弱点・報酬・敵味方。</p></a>
+  <a class="card" href="world.html"><h3>🌾 そのほか</h3><p>畑、魔法の時計、ネザー、エンディング。</p></a>
+  <a class="card" href="sim.html"><h3>🧮 ダメージシミュレーター</h3><p>ステータスを入れると、技のダメージ・消費呪力・範囲が分かります。</p></a>
 </div>
 
-<h2>術式（3種類）</h2>
+<h2>術式（3人）</h2>
 <div class="grid">
-  <a class="card" href="gojo.html"><h3 class="c-gojo">無下限呪術</h3><p>蒼・赫・茈の3つの技と、詠唱、領域「無量空処」。威力も消費も大きい上級者向け。</p></a>
-  <a class="card" href="rika.html"><h3 class="c-rika">リカ</h3><p>呪いの刀とリカを使う術式。倒した敵の術式を「模倣」して使える。純愛砲が切り札。</p></a>
+  <a class="card" href="gojo.html"><h3 class="c-gojo">五条（無下限呪術）</h3><p>蒼・赫・茈と無下限。蒼ワープで飛び回る。威力も消費も大きい上級者向け。</p></a>
+  <a class="card" href="rika.html"><h3 class="c-rika">乙骨（里香）</h3><p>里香と一緒に戦い、ほかの術式を模倣する。純愛ビーム・投射呪法・ブギウギなど7つの技。</p></a>
   <a class="card" href="tokusa.html"><h3 class="c-tokusa">十種影法術</h3><p>10種類の式神を呼んで戦う。式神にはレベル・合体・休養がある。</p></a>
 </div>
 
 <h2>ざっくりした流れ</h2>
 <ol class="steps">
   <li>ワールドに入ると、足元のコマンドブロックとレバーで術式を選べます（<a href="guide.html#start">くわしく</a>）。</li>
-  <li>呪霊（光る強いモブ）を倒して <b>スコア</b> と <b>討伐ポイント</b> を集めます。</li>
-  <li>スコアで <b>ステータス強化</b> や <b>技の解放</b> をします。</li>
-  <li>討伐ポイントがたまると <b>階級</b> が上がり、体力や呪力が増えます。</li>
-  <li>4級になるとボスが出始めます。ボスを倒すと <b>ボス討伐ポイント</b> がもらえ、領域展開などが解放されます。</li>
+  <li>呪霊を倒して <b>スコア</b>・<b>討伐ポイント</b>・<b>残穢</b>（素材）を集めます。</li>
+  <li>スコアで <b>ステータス強化</b>（<kbd>Y</kbd> → ステータス）や <b>技の解放</b>（<kbd>K</kbd>）をします。</li>
+  <li>残穢などで <b>呪いの作業台</b> から防具と呪具を作り、守りと攻めを上げます。</li>
+  <li>討伐ポイントがたまると <b>階級</b> が上がり、強い呪霊やボスが出るようになります。</li>
+  <li>ティア1 → ティア2 → ティア3 のボスを倒し、最後は <b>一億人呪霊</b> を倒すとエンディングです。</li>
 </ol>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成。ゲームの調整で数字が変わることがあります。</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>

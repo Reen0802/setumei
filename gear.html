@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>呪具・防具・守り - ver17 mod版 解説</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
+<main>
+<h1>呪具・防具・守り</h1>
+<p class="lead">攻撃力の育ち方、呪具の等級と倍率、4段階の防具、術式防御力、四肢欠損、素材の集め方です。数字はモッドの設計図 <code>GrowthTable</code>・<code>JujutsuDefense</code>・<code>Limbs</code> から読んでいます。</p>
+<p class="toc"><a href="#atk">攻撃力</a><a href="#grade">呪具の等級</a><a href="#jugu">呪具の一覧</a><a href="#china">中華製</a><a href="#armor">防具4段階</a><a href="#jdef">術式防御力</a><a href="#limbs">四肢欠損</a><a href="#mat">素材の集め方</a></p>
+
+<h2 id="atk">攻撃力 <span class="tag exact">確定</span></h2>
+<div class="formula">素の攻撃力 ＝ 攻撃力スコア × 0.4　（攻撃力スコアが5以下なら 1）
+呪具を持ったとき ＝（素の攻撃力 ＋ 等級の最低保証）× 等級の倍率</div>
+<ul>
+  <li>攻撃力スコアは <a href="screens.html#status">ステータス画面</a> の「能力」で上げます（1回で+1＝素の攻撃力+0.4）。</li>
+  <li>素手には倍率がかかりません。防御力・防具強度・術式防御力は <b>防具からだけ</b> です（体そのものの防御力は0）。</li>
+  <li>例：攻撃力スコア20 → 素の攻撃力8。特級呪具なら（8＋5）×2.6 ＝ <b>33.8</b>、特級・最上位（天逆鉾・釈魂刀・游雲）なら（8＋8）×3.4 ＝ <b>54.4</b>。</li>
+</ul>
+
+<h2 id="grade">呪具の等級 <span class="tag exact">確定</span></h2>
+<p>呪具には等級があり、説明の先頭に「〇級呪具」と出ます。名前の色も等級で変わります。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>等級</th><th class="num">倍率</th><th class="num">最低保証</th><th class="num">耐久（本物）</th><th>攻撃力スコア20のとき</th></tr>
+  <tr><td>4級</td><td class="num">×1.2</td><td class="num">+1</td><td class="num">180</td><td class="num">10.8</td></tr>
+  <tr><td>3級</td><td class="num">×1.4</td><td class="num">+2</td><td class="num">300</td><td class="num">14.0</td></tr>
+  <tr><td>2級</td><td class="num">×1.7</td><td class="num">+3</td><td class="num">600</td><td class="num">18.7</td></tr>
+  <tr><td>1級</td><td class="num">×2.0</td><td class="num">+4</td><td class="num">1200</td><td class="num">24.0</td></tr>
+  <tr><td>特級</td><td class="num">×2.6</td><td class="num">+5</td><td class="num">3000</td><td class="num">33.8</td></tr>
+  <tr><td>特級・最上位</td><td class="num">×3.4</td><td class="num">+8</td><td class="num">3000</td><td class="num">54.4</td></tr>
+</table></div>
+<p>振りの速さは3種類：ふつう（剣と同じ、1秒に1.6回）・速い（2.8回）・重い（斧と同じ、1.0回）。本物の呪具は <b>呪力のこもった石</b> で直せます。</p>
+
+<h2 id="jugu">呪具の一覧</h2>
+<p>右クリックの技には待ち時間があり、ホットバーの右に残り時間が出ます。作り方は <a href="craft.html#jugu">呪いの作業台</a>。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>呪具</th><th>等級</th><th>速さ</th><th>当てたとき</th><th>右クリックの技</th><th class="num">待ち</th></tr>
+  <tr><td>呪符付きの木刀</td><td>4級</td><td>ふつう</td><td>—</td><td>—</td><td class="num">—</td></tr>
+  <tr><td>呪符付きの鉄パイプ</td><td>3級</td><td>重い</td><td>—</td><td>—</td><td class="num">—</td></tr>
+  <tr><td>屠坐魔</td><td>3級</td><td>速い</td><td>振りが速い</td><td>—</td><td class="num">—</td></tr>
+  <tr><td>万里ノ鎖</td><td>2級</td><td>ふつう</td><td>—</td><td>24ブロック先までの敵を引き寄せる</td><td class="num">8秒</td></tr>
+  <tr><td>呪いの杭</td><td>2級</td><td>ふつう</td><td>鈍化Ⅱ（2秒）</td><td>6ブロック先を突き刺す：攻撃力×0.8＋鈍化Ⅳ（5秒）</td><td class="num">6秒</td></tr>
+  <tr><td>黒縄</td><td>1級</td><td>ふつう</td><td>相手の簡易領域を40削り、無下限を解く</td><td>まわり12ブロックの敵の領域・結界・術式を弱める（術式を止める）。<b>さとる・五条悟の無下限を破れる</b>（<a href="bosses.html#satoru-howto">倒し方</a>）</td><td class="num">25秒</td></tr>
+  <tr><td>爛生刀</td><td>1級</td><td>ふつう</td><td>枯らす（衰弱Ⅱ・3秒）</td><td>前6ブロックの敵をまとめて枯らす（衰弱Ⅲ・6秒）</td><td class="num">12秒</td></tr>
+  <tr><td>龍骨</td><td>1級</td><td>重い</td><td>持っている間に受けたダメージを溜める（上限300）</td><td>溜めたダメージを1.5倍にして、前のまわり5ブロックへ放つ</td><td class="num">5秒</td></tr>
+  <tr><td>天逆鉾</td><td>特級・最上位</td><td>ふつう</td><td>術式を消す（無下限・簡易領域・術式）</td><td>10ブロック踏み込んで突く（攻撃力×1.5）。まわり4ブロックの敵の術式もまとめて消す</td><td class="num">8秒</td></tr>
+  <tr><td>釈魂刀</td><td>特級・最上位</td><td>ふつう</td><td>防御力も術式防御も無視して斬る</td><td>魂を断つ構え：8秒の間、次の一撃が×2.5</td><td class="num">15秒</td></tr>
+  <tr><td>游雲</td><td>特級・最上位</td><td>重い</td><td>攻撃力が高いほど強い：成長ぶんの攻撃力1につき倍率+0.04（最大+1.0）</td><td>まわり6ブロックを薙ぎ払う（攻撃力×1.5）</td><td class="num">8秒</td></tr>
+</table></div>
+<h3>前からある呪具（データパックのレシピ）</h3>
+<p>とざま・黒刀・グローブは <b>4級</b>、なまくら・金づちは <b>3級</b>、斧(斬)・刀は <b>2級</b> です。作り直すと等級の倍率がかかります（前に作ってあった物は前の数字のまま）。</p>
+
+<h2 id="china">中華製（ボスが落とす弱い版） <span class="tag exact">確定</span></h2>
+<p>フィジギフは倒れたときに <b>40%</b> で中華製の呪具（万里ノ鎖・天逆鉾・釈魂刀・游雲のどれか）を落とします。</p>
+<div class="tbl-wrap"><table>
+  <tr><th></th><th>本物</th><th>中華製</th></tr>
+  <tr><td>倍率</td><td>等級の倍率</td><td>本物×0.6（ただし1.1より下にはならない）</td></tr>
+  <tr><td>耐久</td><td>等級ごと</td><td>60（鉄インゴットで直せる）</td></tr>
+  <tr><td>技の待ち時間</td><td>上の表</td><td>2倍</td></tr>
+  <tr><td>効果の強さ（確率・範囲など）</td><td>上の表</td><td>半分</td></tr>
+</table></div>
+
+<h2 id="armor">防具4段階 <span class="tag exact">確定</span></h2>
+<p>防具は呪いの作業台で、前の段階の防具から作り直して上げていきます。4段階とも <b>壊れません</b>。同じ段階の4部位をそろえると <b>一式ボーナス</b> が付きます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>段階</th><th>防御力（頭・胴・脚・足）</th><th class="num">防具強度（1部位）</th><th class="num">術式防御力（1部位）</th><th>一式ボーナス</th><th>一式の合計</th></tr>
+  <tr><td>高専の制服</td><td class="num">1・3・2・1</td><td class="num">0</td><td class="num">1</td><td>防御力+1・術式防御力+2</td><td>防御力8・術式防御力6（18%）</td></tr>
+  <tr><td>強化した制服</td><td class="num">2・5・4・2</td><td class="num">1</td><td class="num">2</td><td>防御力+2・術式防御力+3</td><td>防御力15・強度4・術式防御力11（33%）</td></tr>
+  <tr><td>呪術師の装束</td><td class="num">3・7・6・3</td><td class="num">2</td><td class="num">3</td><td>強度+2・術式防御力+4</td><td>防御力19・強度10・術式防御力16（48%）</td></tr>
+  <tr><td>特級の防具</td><td class="num">4・8・7・4</td><td class="num">3</td><td class="num">4</td><td>強度+3・術式防御力+6・ノックバック耐性+0.2</td><td>防御力23・強度15・術式防御力22（66%）</td></tr>
+</table></div>
+<p>前の「現世最強」「平安最強」の防具は、持っていると同じ部位の新しい防具に作り直されます（現世最強→強化した制服、平安最強→呪術師の装束）。</p>
+
+<h2 id="jdef">術式防御力 <span class="tag exact">確定</span></h2>
+<div class="formula">術式ダメージの軽減 ＝（術式防御力 ＋ 防具の「術式防御」エンチャントのレベル合計）× 3%　（上限 80%）</div>
+<ul>
+  <li>効くのは <b>術式のダメージだけ</b> です。ふつうの殴り・矢などには効きません（そちらは防御力と防具強度）。</li>
+  <li><b>純粋な術式ダメージ</b>：防御力も防具強度も効かず、術式防御力だけで減ります。</li>
+  <li><b>複合の術式ダメージ</b>（術式と体の両方の攻撃）：防御力を <b>2割</b>だけ・防具強度は0として防具の計算をし、そのあとで術式防御力の軽減がかかります。</li>
+  <li>27ポイントで81%なので、上限の80%には <b>27ポイント</b> で届きます。</li>
+  <li>画面では、鎧マークの1段上の紫の六角形で見えます（<a href="screens.html#hud">画面</a>）。</li>
+  <li>呪霊やボスに術式防御は付いていません（データパックの時は等級ごとに付いていました）。</li>
+</ul>
+
+<h2 id="limbs">四肢欠損 <span class="tag exact">確定</span></h2>
+<p>すべての生き物は、受けたダメージ（防具や術式防御で減ったあと）で、<b>部位ごとに「ダメージ÷4000」の確率</b> でもげます。100ダメージなら各部位2.5%、4000ダメージで100%。もげると「〇〇が〇〇の右手をもいだ」と出ます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>部位</th><th>不利</th></tr>
+  <tr><td>足</td><td>片足：移動・ジャンプ −30%。両足：移動 −70%・ジャンプ −60%（プレイヤーは這う姿勢）</td></tr>
+  <tr><td>手</td><td>右手なし：攻撃力 −40%、左手なし：−15%、両手なし：−80%。その手に物を持てない。プレイヤーは掘る速さも −30%（両手 −70%）</td></tr>
+  <tr><td>目</td><td>プレイヤー：画面が暗くなる。モブ：追いかける範囲が狭くなる（片目 −40%・両目 −80%）</td></tr>
+</table></div>
+<p>治し方：<b>反転術式</b>（全部治る）、お店の絆創膏、死亡（1つ治る）。まひと・めろんぱんの「無為転変」を受けると、少しの間もげやすさが <b>2倍</b> になります。ボスも反転術式で手足を治します。</p>
+
+<h2 id="mat">素材の集め方 <span class="tag exact">確定</span></h2>
+<div class="tbl-wrap"><table>
+  <tr><th>素材</th><th>入手</th></tr>
+  <tr><td>残穢</td><td>呪霊を倒すと落とす：4級1・3級1〜2・2級2〜3・1級3〜4・特級5〜6・ネザー3〜4個。ボスは6個</td></tr>
+  <tr><td>呪力のこもった石</td><td>2級30%・1級60%・特級100%・ネザー呪霊50%。ボスは3個</td></tr>
+  <tr><td>獄炎の残穢</td><td>ネザー呪霊がたまに落とす（5%）</td></tr>
+  <tr><td>真人の魂の欠片</td><td>まひとを倒すと手に入る</td></tr>
+  <tr><td>特級呪核</td><td>ティア3のボス（めろんぱん・すっくん・五条悟）を倒すと手に入る</td></tr>
+  <tr><td>呪術師の装束の型紙</td><td>フィジギフ・さとるのボスバッグに必ず1枚</td></tr>
+  <tr><td>特級の防具の型紙</td><td>じょうご・まひとのボスバッグに必ず1枚</td></tr>
+  <tr><td>呪霊の感情</td><td>呪霊を倒すと配られる〇級呪霊アイテムを使うと出る。はなみ・じょうごのボスバッグからも</td></tr>
+  <tr><td>人間の感情</td><td>ボスや一部の呪霊を倒すと落とす</td></tr>
+  <tr><td>くだもの（いちご・みかん・パイン・メロン）</td><td><a href="world.html#farm">畑</a>で育てる。いちごの種はTEMUの店、ほかは呪霊がたまに落とす</td></tr>
+</table></div>
+</main>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

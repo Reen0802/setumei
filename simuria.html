@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>シムリア星 - ver17 mod版 解説</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
+<main>
+<h1>シムリア星 <span class="tag new">mod版</span></h1>
+<p class="lead">ロケットで行ける別の星です。重力が軽く、シムリア星人と最強の術師 <b>ダブラ</b> がいます。ここでしか取れない素材で <b>星の本</b>（防具に付けるエンチャント）を作れます。数字はモッドの設計図 <code>SimuriaTable</code> から読んでいます。</p>
+<p class="toc"><a href="#go">行き方・帰り方</a><a href="#world">星のようす</a><a href="#mobs">シムリア星人</a><a href="#dabura">ダブラ</a><a href="#items">素材</a><a href="#books">星の本</a><a href="#bgm">BGM</a></p>
+
+<h2 id="go">行き方・帰り方 <span class="tag exact">確定</span></h2>
+<ol class="steps">
+  <li><b>ロケット</b> を呪いの作業台で作る：ガラス1・鉄ブロック2・呪力のこもった石1・ロケット花火2・ネザライトインゴット1（<a href="craft.html#other">並べ方</a>）。</li>
+  <li>置いて <b>右クリック</b>。3秒ゲートが開く演出のあと、シムリア星の <b>同じ x・z</b> の場所へ飛びます（演出の間にロケットから4ブロック以上離れると取りやめ）。</li>
+  <li>着いた所に 5×5 の足場と <b>帰りのゲート</b> ができます（近くにゲートがあればそれを使う）。</li>
+  <li>帰るときは帰りのゲートに入ると、<b>自分が乗ったロケットの所</b>へ戻ります。帰り先は人ごとに覚えていて、死んでも・抜けても残ります。</li>
+</ol>
+<p>ロケットは壊すと何も落ちません。帰りのゲートは壊せません。ロケットと帰りのゲートは <a href="map.html">地図</a> にも出ます。</p>
+
+<h2 id="world">星のようす</h2>
+<ul>
+  <li><b>重力が軽い</b>：落ちるのがゆっくり（×0.55）、ジャンプが高い（約1.35倍・約3ブロック）、落下ダメージを受けない高さが6ブロック増える。星を出ると元に戻ります。</li>
+  <li>空に <b>太陽が2つ</b>。地面は星の岩・結晶の土、ところどころに光る結晶と <b>灯花</b>。</li>
+  <li>小さな <b>遺跡</b>：丸い床・崩れた柱の輪・真ん中に <b>星の遺物箱</b>（70%）・まわりに光る結晶。</li>
+  <li>呪霊は出ません。かわりに <a href="#mobs">シムリア星人</a> が出ます。</li>
+</ul>
+
+<h2 id="mobs">シムリア星人 <span class="tag exact">確定</span></h2>
+<p>3秒ごとに、プレイヤーから18〜36ブロックの所に55%で出ます（1人のまわり48ブロックに6体まで。ダブラの64ブロック以内には出ない）。強さはネザー呪霊くらい〜少し上。<b>倒しても何も出ません</b>（ドロップ・経験値・討伐ポイントなし）。星人どうしは味方です。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>種類</th><th class="num">出やすさ</th><th class="num">体力</th><th class="num">攻撃</th><th class="num">防御</th><th>技（予告 → 中身）</th></tr>
+  <tr><td>光の兵</td><td class="num">30</td><td class="num">500</td><td class="num">16</td><td class="num">10</td><td>光の筋（1.2秒）→ まっすぐな光線（28ブロック、22）。3秒ごと</td></tr>
+  <tr><td>混沌の片割れ</td><td class="num" rowspan="2">15（2体1組）</td><td class="num">450</td><td class="num">14</td><td class="num">8</td><td>相手の足元に乱れの輪（1.5秒）→ 半径3.5に12＋めまい・鈍り・弾き。6秒ごと</td></tr>
+  <tr><td>調和の片割れ</td><td class="num">450</td><td class="num">12</td><td class="num">12</td><td>2秒ごとに相方を24治して強くする。<b>片方が倒れると、残った方は崩れて弱る</b>（体力半分・攻撃×0.6）</td></tr>
+  <tr><td>殺意の兵</td><td class="num">20</td><td class="num">550</td><td class="num">20</td><td class="num">12</td><td>空間のゆがみ（うすい予告、1.1秒）→ 見えにくい刃（半径1.8に26）。3.5秒ごと</td></tr>
+  <tr><td>戦士</td><td class="num">35</td><td class="num">650</td><td class="num">22</td><td class="num">16</td><td>構え（0.6秒）→ 一気に踏み込んで3連撃（各12）。2.5秒ごと</td></tr>
+</table></div>
+<p>96ブロック以上離れた星人は片づけられます。</p>
+
+<h2 id="dabura">ダブラ（シムリア星人最強の術師） <span class="tag exact">確定</span></h2>
+<div class="card">
+<p><b>呼び方</b>：<b>シムリアの祭壇</b>（古代の記録片2・星晶3・灯花の花びら1・遺跡の石3）を作り、星の中で右クリック。祭壇が消えてダブラが現れます。</p>
+<p>体力7000（難易度ハード以外は7割）・防御力30・攻撃力26。受けるダメージ×0.55。誰とも味方ではありません。体力が減るごとに4つの形態に変わります（形態が変わる演出2.5秒）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>形態</th><th>体力</th><th>増える技</th></tr>
+  <tr><td>① 光</td><td>はじめ</td><td><b>光線</b>：予告の線（1.3秒）→ 太い光（40ブロック、46）。<b>光の突進</b>：光の筋で道を見せ（0.9秒）、光の速さで22ブロック駆け抜ける（40）</td></tr>
+  <tr><td>② 殺意の具現化</td><td>75%</td><td><b>殺意の刃</b>：足元に赤いゆがみ（1.2秒）→ 刃が突き出る（半径2.2に38、形態が進むほど数が増える）。<b>殺意の腕</b>：大きな影の輪（1.5秒）→ 叩きつけ（半径5に55）。<b>領域展開</b>を使うようになる</td></tr>
+  <tr><td>③ 光速</td><td>50%</td><td>一気に速くなり（0.55）、待ち時間も早く戻る。<b>光速の連撃</b>：光る予告の場所へ瞬間移動して4回斬る（各18）</td></tr>
+  <tr><td>④ 反転</td><td>25%</td><td><b>反転術式</b>で40回復（10秒ごと）。<b>黒い穴</b>：予告（2秒）のあと5秒、半径14を吸い込み、中心3ブロックで削る（0.5秒ごとに10）</td></tr>
+</table></div>
+<p><b>領域展開</b>：壁のある領域（半径20・15秒）。必中は0.5秒ごとの光の刃（14）。1回の戦いで1回まで、こちらが領域を開くと10%で使い返す。押し合い・簡易領域（0.5秒ごとに6削られながら耐える）・無下限の中和はほかのボスの領域と同じです。</p>
+<p><b>報酬</b>：倒すと、当てた人と64ブロック以内の人それぞれに <b>光の欠片×3</b>。ボスバッグは出ません。</p>
+</div>
+
+<h2 id="items">素材 <span class="tag exact">確定</span></h2>
+<div class="tbl-wrap"><table>
+  <tr><th>素材</th><th>入手</th></tr>
+  <tr><td>星晶</td><td>星の岩の中の <b>星晶の鉱石</b> を掘る（鉄のつるはし以上・幸運が効く）。光る結晶を壊すとたまに。星の遺物箱からも</td></tr>
+  <tr><td>灯花の花びら</td><td>地面に咲く灯花を摘む。星の遺物箱からもたまに</td></tr>
+  <tr><td>古代の記録片</td><td>遺跡の星の遺物箱を壊す</td></tr>
+  <tr><td>遺跡の石</td><td>遺跡・着いた所の足場にある（つるはしで掘る）</td></tr>
+  <tr><td>光の欠片</td><td>ダブラを倒す</td></tr>
+</table></div>
+<p>創造モードのタブ「シムリア星」に、ブロックと素材が並んでいます。</p>
+
+<h2 id="books">星の本（エンチャント） <span class="tag exact">確定</span></h2>
+<p>呪いの作業台で、本と星の素材から作ります（並べ方自由。<a href="craft.html#other">レシピ</a>）。いちばん強い段階（Ⅲ、息吹はⅡ）には <b>光の欠片</b> が要ります。金床で防具に付けます。同じ本を2か所に付けても、強いほう1つだけ効きます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>本</th><th>付ける所</th><th class="num">最大</th><th>効き目（1レベルごと）</th></tr>
+  <tr><td>星の浄化</td><td>胸</td><td class="num">Ⅲ</td><td>悪い状態の時間 −12%。無量空処・術式封印の残りが、0.5秒ごとに15%でもう1回分減る</td></tr>
+  <tr><td>残光</td><td>脚</td><td class="num">Ⅲ</td><td>攻撃を受けたあとの無敵時間 +3tick（無敵を貫く攻撃には効かない）</td></tr>
+  <tr><td>星詠み</td><td>頭</td><td class="num">Ⅲ</td><td>R 長押しの溜め・詠唱が10%速い</td></tr>
+  <tr><td>星の息吹</td><td>防具どこでも</td><td class="num">Ⅱ</td><td>満腹度18以上のとき、2秒ごとに0.5回復（ふつうの自然回復に上乗せ）</td></tr>
+  <tr><td>星の糧</td><td>防具どこでも</td><td class="num">Ⅲ</td><td>満腹度の減り −15%</td></tr>
+</table></div>
+
+<h2 id="bgm">BGM</h2>
+<ul>
+  <li>星の中ではいつもの曲のかわりに、シムリア星の曲（2曲からランダム、同じ曲は続かない）が流れます。</li>
+  <li>ダブラの50ブロック以内では <b>ダブラ戦の曲</b>。ティア3のボスの曲がいちばん優先、その次がダブラ、その次がティア1・2のボスの曲です。</li>
+  <li>音量は「音量とサウンド」の <b>モッドの BGM</b>（<a href="screens.html#sound">音量</a>）。</li>
+</ul>
+</main>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

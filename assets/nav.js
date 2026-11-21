@@ -2,10 +2,11 @@
 (function () {
   'use strict';
   var PAGES = [
-    { g: 'はじめに', items: [['index.html', 'トップ'], ['guide.html', 'ゲームの進め方'], ['strategy.html', '攻略・おすすめ']] },
-    { g: 'しくみ', items: [['status.html', 'ステータス・呪力'], ['domain.html', '領域展開'], ['curses.html', '呪霊・ボス'], ['bosses.html', 'ボス攻略'], ['challenge.html', '全体チャレンジ']] },
-    { g: '術式', items: [['gojo.html', '無下限呪術'], ['rika.html', 'リカ'], ['tokusa.html', '十種影法術']] },
-    { g: '道具', items: [['sim.html', 'シミュレーター']] }
+    { g: 'はじめに', items: [['index.html', 'トップ'], ['controls.html', '操作（キー）'], ['screens.html', '画面の見かた'], ['map.html', '地図（ミニマップ）'], ['guide.html', 'ゲームの進め方'], ['strategy.html', '攻略・おすすめ']] },
+    { g: 'しくみ', items: [['status.html', 'ステータス・呪力'], ['gear.html', '呪具・防具・守り'], ['craft.html', '呪いの作業台'], ['domain.html', '領域展開'], ['challenge.html', '全体チャレンジ']] },
+    { g: '敵', items: [['curses.html', '呪霊'], ['bosses.html', 'ボス'], ['simuria.html', 'シムリア星']] },
+    { g: '術式', items: [['gojo.html', '五条（無下限呪術）'], ['rika.html', '乙骨（里香）'], ['tokusa.html', '十種影法術']] },
+    { g: 'そのほか', items: [['world.html', '畑・時計・ネザー・エンディング'], ['sim.html', 'シミュレーター']] }
   ];
   var here = decodeURIComponent(location.pathname.split('/').pop() || 'index.html');
   if (here === '') here = 'index.html';

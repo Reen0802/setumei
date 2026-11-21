@@ -244,3 +244,11 @@ select {
 .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin: 0 4px 0 10px; }
 .diff-up { color: var(--good); font-size: 12px; }
 .diff-down { color: var(--aka); font-size: 12px; }
+
+/* ---- mod版で足したもの ---- */
+.tag.wip { background: transparent; border-color: var(--muted); color: var(--muted); border-style: dashed; }
+.tag.new { background: var(--accent); border-color: var(--accent); color: #fff; }
+.recipe { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12px; line-height: 1.25; white-space: pre; background: var(--code-bg); border-radius: 6px; padding: 4px 6px; display: inline-block; }
+td.wrap { white-space: normal; min-width: 180px; }
+.cols2 { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.cols2 > * { min-width: 0; }

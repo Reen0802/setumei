@@ -3,23 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>攻略・おすすめ</title>
+<title>攻略・おすすめ - ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
 <h1>攻略・おすすめの進め方</h1>
-<p class="lead">「何から始めればいい？」「スコアは何に使う？」に答えるページです。仕組みはデータパックから読み取ったもの、おすすめはそれをもとにした一例です。</p>
+<p class="lead">「何から始めればいい？」「スコアは何に使う？」に答えるページです。仕組みはモッドとデータパック部分から読み取ったもの、おすすめはそれをもとにした一例です。</p>
+<div class="note">mod版では、防御は <a href="gear.html">防具と呪具</a> で上げます（呪いの作業台で4段階の防具・等級つきの呪具を作る）。ボス報酬の「防御力+」はなくなりました。</div>
 
 <h2 id="pick">術式の選び方</h2>
 <div class="tbl-wrap"><table>
   <tr><th>術式</th><th>むずかしさ</th><th>いいところ</th><th>気をつけること</th></tr>
   <tr><td class="c-tokusa"><b>十種影法術</b></td><td>★★☆</td><td>式神が勝手に戦う。出力Ⅰなら呼ぶのが安い。式神のレベルで強くなる。チャレンジのお題も増える。</td><td>出している間ずっと維持コストがかかる。式神が倒されると呼べなくなる。</td></tr>
-  <tr><td class="c-rika"><b>リカ</b></td><td>★★☆</td><td>リカ本体が強く、リカを出している間は最大呪力がとても増える。反転術式がはじめから使える。</td><td>接続時間の管理が必要。模倣は呪霊の手足を切らないと覚えない。</td></tr>
+  <tr><td class="c-rika"><b>乙骨（リカ）</b></td><td>★★☆</td><td>リカ本体が強く、リカを出している間は最大呪力がとても増える。反転術式がはじめから使える。</td><td>接続時間の管理が必要。模倣は呪霊の手足を切らないと覚えない。</td></tr>
   <tr><td class="c-gojo"><b>無下限呪術</b></td><td>★★★</td><td>茈・無制限の紫など最大火力。無下限のバリアで守りも強い。</td><td>呪力と焼き切れの消費が大きい。茈は反転術式を覚えるまで使えない。</td></tr>
 </table></div>
-<p>はじめてなら <b>十種影法術</b> か <b>リカ</b> が遊びやすいです。術式はあとで本の「術式リセット」で変えられます（ステータスはそのまま）。</p>
+<p>はじめてなら <b>十種影法術</b> か <b>乙骨（リカ）</b> が遊びやすいです。術式はあとで本の「術式リセット」で変えられます（ステータスはそのまま）。</p>
 
 <h2 id="stat">スコアの使い方（ステータスの上げ方）</h2>
 <p>消費呪力は <span class="mono">a×(術式ダメージ − 呪力操作)＋b＋c×術式ダメージ</span> です。つまり <b>呪力操作が術式ダメージに追いつくと、a の部分が0になって一気に安くなります</b>。</p>
@@ -61,13 +62,14 @@
 <h3>ステップ4：ミニボスと特典（準1級〜）</h3>
 <ul>
   <li>コロニー（大阪・愛知・仙台）のミニボスを初めて倒すと <b>人殺しポイント</b>。100ごとに特典と交換できます。おすすめは「焼き切れ治療の謎負担半減」「反転術式の再生時間2倍」、無下限なら「赫の攻撃力2倍」。</li>
-  <li>ミニボスを全部倒すと、ティア3の <b>めろんぱん</b> が出るようになります。</li>
+  <li><b>まひと</b>を倒す（またはコロニーの強敵を全部倒す）と、ティア3の <b>めろんぱん</b> が出るようになります。</li>
   <li>呪霊がまれに持つ <b>宿儺の指</b> を食べると最大呪力+1000・呪力回復+1。20本そろうと <b>すっくん</b>。</li>
 </ul>
 
 <h3>ステップ5：ティア3ボスと特級呪術師</h3>
 <ul>
-  <li>五条悟には <b>逆鉾</b> と <b>簡易領域</b> を用意。すっくんは <b>技を変えながら</b>（適応される前に）。めろんぱんは <b>呼び出された呪霊から</b> 倒す。</li>
+  <li><b>五条悟</b>（ティア0）はふつうには勝てません。領域・<b>天逆鉾</b>・黒閃で無下限を中和し、止まった2秒の間に <b>獄門疆</b>（めろんぱんが落とす）で封印します。すっくんは <b>伏魔御廚子に簡易領域</b>、魔虚羅には <b>技を変えながら</b>（適応される前に）。めろんぱんは <b>呼び出された呪霊から</b> 倒す。</li>
+  <li>めろんぱんを倒すともらえる <b>呪胎の核</b> で、最後のボス <b>一億人呪霊</b> を呼べます（2人がおすすめ）。倒すとエンディング。</li>
   <li>特級呪術師は討伐ポイント1000（特別1級になってから）。呪霊をひたすら倒す長い道のりです。帳で「呪霊湧き：多め」にすると早くなります。</li>
 </ul>
 
@@ -89,7 +91,7 @@
       <li>ボスには <b>無下限のバリア</b> が強い（飛び道具や「さわる」を止める）。逆鉾を持つ相手には注意。</li>
       <li>最終的には <a href="gojo.html#mp">無制限の紫</a>。術式ダメージ7以上でないとダメージ0なので注意。</li>
     </ul></div>
-  <div class="card"><h3 class="c-rika">リカ</h3>
+  <div class="card"><h3 class="c-rika">乙骨（リカ）</h3>
     <ul>
       <li>まず <b>接続時間</b> をためて、リカを補充 → 召喚。出力Ⅰならリカが出ていても接続時間が減りません。</li>
       <li>技術ツリーは <b>部分顕現Ⅱ → 完全顕現 → 純愛砲</b>。完全顕現のリカは味方も回復します。</li>
@@ -106,7 +108,7 @@
     </ul></div>
 </div>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>

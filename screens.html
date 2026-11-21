@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>画面の見かた - ver17 mod版 解説</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
+<main>
+<h1>画面の見かた</h1>
+<p class="lead">ゲーム中の表示（HUD）、<kbd>Y</kbd> のメニュー、ステータス画面、アクセサリー枠、音量の設定です。</p>
+<p class="toc"><a href="#hud">ゲーム中の表示</a><a href="#aim">照準の敵・六眼</a><a href="map.html">地図</a><a href="#menu">メニュー</a><a href="#status">ステータス画面</a><a href="#tree">技術ツリー</a><a href="#acc">アクセサリー枠</a><a href="#workbench">呪いの作業台</a><a href="#sound">音量</a></p>
+
+<h2 id="hud">ゲーム中の表示</h2>
+<div class="tbl-wrap"><table>
+  <tr><th>どこ</th><th>何が出る</th></tr>
+  <tr><td>ホットバーの左</td><td>今の <b>技</b> と <b>出力</b>（左手に物を持っていれば、その左隣）</td></tr>
+  <tr><td>画面の右（縦のバー）</td><td><b>呪力</b>。下からたまり、4分の1ごとに目盛り。バーの上に数字</td></tr>
+  <tr><td>呪力バーの左</td><td><b>焼き切れ</b>（左半分。1000でいっぱい）と <b>謎負担</b>（右半分。500でいっぱい）のバー。下に数字</td></tr>
+  <tr><td>画面の左上</td><td><b>照準を合わせている敵</b> の名前と体力バー（<a href="#aim">下を見る</a>）</td></tr>
+  <tr><td>防御力（鎧マーク）の1段上</td><td><b>術式防御力</b>：紫の六角形。1個＝2ポイント（半分あり）、最大10個（20ポイント）。超えたら「六角形1個＋数字」。防御力が0なら鎧マークの段に出る（<a href="gear.html#jdef">術式防御力</a>）</td></tr>
+  <tr><td>ホットバーの右</td><td>手に持っている <b>呪具の技の待ち時間</b>（「万里ノ鎖 右クリック OK」／「あと 3.2秒」。龍骨は溜まっている量も）</td></tr>
+  <tr><td>画面の右下</td><td><b>今使える操作</b>（「R：蒼」「左Ctrl+R：蒼ワープ」など。<a href="controls.html">操作</a>）</td></tr>
+  <tr><td>呪霊の頭の上</td><td><b>体力バー</b>（等級の色）。1行目「名前[等級]」、術式持ちは「術」、指持ちは「指」、小さな領域を持つと「領」が付く。2行目「体力 ○○/○○」</td></tr>
+  <tr><td>画面のふち</td><td>無下限を張っている間：ごく薄い青／ネザー：熱でほんのり赤くゆらぐ</td></tr>
+  <tr><td>画面全体</td><td>領域の中にいる間は色が変わる（無量空処は星空）。目がもげると暗くなる</td></tr>
+  <tr><td>乙骨の投射呪法</td><td>フィルムの縁取りとコマ数（描いたコマ・加速の段階・残り時間）</td></tr>
+  <tr><td>画面の左上（小さく）</td><td><b>今の目標</b>（敵の表示の下。ステータス画面の「目標」タブで出す／消す）</td></tr>
+  <tr><td>画面の左（縦の真ん中あたり）</td><td><b>近くの仲間の体力・呪力</b>：同じチームで同じディメンションの64ブロック以内の仲間を、近い順に4人まで。名前・体力バー（緑→黄→赤）・呪力バー（紫。焼き切れ中は赤）</td></tr>
+  <tr><td>画面の右上</td><td><b>ミニマップ</b>（<a href="map.html">地図</a>）</td></tr>
+  <tr><td>まわり</td><td>無下限の膜・帳の黒い膜・黒閃や身体強化の光（<a href="world.html#look">見た目</a>）</td></tr>
+</table></div>
+<p>サーバーから2秒以上なにも届かないとき（モッドが入っていないサーバーなど）は、これらの表示は出ません。</p>
+
+<h2 id="aim">照準の敵 <span class="tag exact">確定</span></h2>
+<ul>
+  <li>照準を合わせた生き物の <b>名前と体力バー</b> が左上に出ます。外しても1.5秒は残ります。倒すと「撃破」と出ます。</li>
+  <li>見える距離は <b>30ブロック</b>。重なっていれば近いほう。壁（ブロック）の向こうは出ません。</li>
+  <li>体力バーの色：半分より多いと緑、4分の1より多いと黄、それ以下は赤。</li>
+  <li>ボスと術式持ちの呪霊は、名前の横に <b>呪力</b> と <b>頭の負担</b> も出ます（<a href="bosses.html#energy">敵の呪力</a>）。</li>
+</ul>
+<h3 id="sixeyes">六眼の視界</h3>
+<p>六眼を付けている人（「<b>蒼い目</b>」のアイテムで付ける。創造モードの「呪具と防具」タブにもある）には、呪力も待ち時間も使わず、いつも次のものが見えます。</p>
+<ul>
+  <li>照準の敵表示の右に、小さな枠で <b>詳しい情報</b>。</li>
+  <li>呪霊・ボス・術師が歩いた跡（<b>残穢の足跡</b>）が淡い光の粒で出る（30秒ほどで消える）。</li>
+  <li><b>強い呪力の気配</b>（ボス・1級以上・強い術師）が、壁の向こうでも画面の真ん中のまわりにうっすら出る。</li>
+  <li>地図に呪霊・ボスが全部出る（なければ近くか見えている物だけ。<a href="map.html#marks">地図</a>）。</li>
+</ul>
+
+<h2 id="menu">メニュー（<kbd>Y</kbd>）</h2>
+<p>本に書かれているボタンと同じことができます。ゲームは止まりません。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>ページ</th><th>ボタン</th></tr>
+  <tr><td>1</td><td>近くの仲間にテレポート／<b>ステータス</b>（ステータス画面を開く）／買い物／オート反転／アビリティ1／インスタント焼き切れ回復</td></tr>
+  <tr><td>2</td><td>技術ツリー表示／消費呪力表示／ディメンション切り替え／帳を降ろす／<b>呪力消費と焼き切れ確認</b>（ステータス画面の「情報」タブ）／術式リセット／破壊切り替え／拠点作成</td></tr>
+  <tr><td>3</td><td>拠点に帰還／大阪・愛知・仙台・北海道コロニーへいく／<b>エンディングをもう一度見る</b>（一億人呪霊を倒した人だけ。<a href="world.html#ending">くわしく</a>）</td></tr>
+</table></div>
+<p>ボタンの中身は <a href="guide.html#book">ゲームの進め方</a> にあります。</p>
+
+<h2 id="status">ステータス画面</h2>
+<p><kbd>Y</kbd> → ステータス、または本の「ステータス」「呪力消費と焼き切れ確認」で開きます。チャットに一覧を出すのはやめて、この画面になりました。</p>
+<div class="cols2">
+  <div class="card"><h3>左がわ</h3><p>自分の姿・階級・ポイント（スコア／討伐ポイント／ボス討伐／人殺しポイント）、<b>強化上限のバー</b>（強化した回数／強化できる上限。上限は階級が上がると増える）。</p></div>
+  <div class="card"><h3>① 能力</h3><p>項目をクリックで1回強化（スコアを使う）。<b>シフト＋クリックで5回まとめて</b>。それぞれ「今 → 強化後」と必要スコアが出ます。スコアが足りない・上限に届いているときは押せません。</p></div>
+  <div class="card"><h3>② 特典</h3><p>人殺しポイントで交換する特典（1つ100ポイント）。共通の特典と、五条・乙骨の特典。交換済みは「✔ 交換済み」。</p></div>
+  <div class="card"><h3>③ 領域</h3><p>領域のプリセット。結界術を「結界強度」と「結界基礎」に分けて決めます（−5／−1／＋1／＋5）。★＝ダブルシフト（<kbd>L</kbd>）で出すプリセット。プリセット2は特典「領域のプリセット＋１」で使えます。</p></div>
+  <div class="card"><h3>④ 情報</h3><p>今の <b>攻め</b>（素の攻撃力・手に持っている呪具の等級と倍率・今の攻撃力）、<b>守り</b>（防御力・防具強度・術式防御力）、アクセサリー、<b>技ごとの呪力消費：焼き切れ</b>の一覧。</p></div>
+  <div class="card"><h3>⑤ 目標</h3><p>「今の目標」を3つ。種類は <b>ボス・大きな目標・装備・階級</b> の順に選ばれます。押すと、どこで何をすればよいかの説明。「全部の目標」で一覧。左上に小さく出すこともできます。</p></div>
+</div>
+<div class="note">「今の目標」の例：次に倒すボスとその出かた、黒閃を出す・領域展開を覚える・コロニーへ行く・宿儺の指を集める、<b>今の持ち物で作れる防具・呪具</b>（足りない素材と数も）、次の階級の条件。目標を決めるのはスコア・進捗・持ち物だけです。オン／オフは自分のパソコンに覚えます。</div>
+
+<h2 id="tree">技術ツリー（<kbd>K</kbd>）</h2>
+<p>3つのスキルの段階が並び、今どこまで開放したか・次に何が要るか（スコア・ボス討伐ポイント・前の段階）が見られます。「開放」を押すと、本の技術ツリーで開放したのと同じです。必要なスコアは術式のページにあります（<a href="gojo.html#tree">五条</a>・<a href="rika.html#tree">乙骨</a>・<a href="tokusa.html#tree">十種</a>）。</p>
+
+<h2 id="acc">アクセサリー枠（2つ）</h2>
+<p>持ち物画面（<kbd>E</kbd>）に <b>アクセサリー枠が2つ</b> あります。アクセサリーを入れると効果が出ます（シフトクリックでも入ります）。中身は死んでも消えません。前のやり方で付けていたアクセサリーは、はじめて入ったときに枠へ移ります。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>番号</th><th>名前</th><th>出どころ</th><th>効果</th></tr>
+  <tr><td class="num">1</td><td>俊足の足袋</td><td>ミニボス</td><td>移動速度+10%</td></tr>
+  <tr><td class="num">2</td><td>天狗の羽根</td><td>ミニボス</td><td>ジャンプ力アップ・落下ダメージ半分</td></tr>
+  <tr><td class="num">3</td><td>夜目の眼鏡</td><td>ミニボス</td><td>暗い所でもよく見える</td></tr>
+  <tr><td class="num">4</td><td>守銭奴の財布</td><td>ミニボス</td><td>チャレンジのスコア+50%（ボスバッグのスコアも1.5倍）</td></tr>
+  <tr><td class="num">5</td><td>鉄の護符</td><td>ティア1</td><td>防具+4・防具強度+2</td></tr>
+  <tr><td class="num">6</td><td>吸血の牙</td><td>ティア1</td><td>敵を倒すとハート2つ回復</td></tr>
+  <tr><td class="num">7</td><td>呪力の指輪</td><td>ティア1</td><td>呪力の回復+20%</td></tr>
+  <tr><td class="num">8</td><td>剛力の籠手</td><td>ティア2</td><td>素手・武器の攻撃+20%</td></tr>
+  <tr><td class="num">9</td><td>巨躯の帯</td><td>ティア2</td><td>最大体力+20%</td></tr>
+  <tr><td class="num">10</td><td>縛りの鎖</td><td>ティア2</td><td>最大体力−30%、そのかわり攻撃+30%</td></tr>
+  <tr><td class="num">11</td><td>不動の結び</td><td>ティア2</td><td>ノックバックと爆風で飛ばされにくい（半分）</td></tr>
+  <tr><td class="num">12</td><td>縛りの目隠し</td><td>ティア3</td><td>移動速度−15%、そのかわり呪力の回復+50%</td></tr>
+  <tr><td class="num">13</td><td>剣聖の鍔</td><td>ティア3</td><td>攻撃の速さ+20%・攻撃が1ブロック遠くまで届く</td></tr>
+  <tr><td class="num">14</td><td>呪胎の殻</td><td>ティア3</td><td>最大体力+30%・防具+6</td></tr>
+  <tr><td class="num">15</td><td>一億の残滓</td><td>一億人呪霊</td><td>最大体力+20%・攻撃+20%・移動速度+5%・呪力の回復+20%</td></tr>
+</table></div>
+<h3>ボスバッグから出る確率 <span class="tag exact">確定</span></h3>
+<p>ボスを倒すともらえる <b>ボスバッグ</b> を使うと、スコアと、まれにアクセサリーが出ます。アクセサリーはその段の中からランダムです。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>バッグ</th><th class="num">スコア</th><th class="num">アクセサリー（ふつう）</th><th class="num">（ハード）</th><th>出るもの</th></tr>
+  <tr><td>ミニボス</td><td class="num">3</td><td class="num">2%</td><td class="num">3%</td><td>1〜4</td></tr>
+  <tr><td>ティア1</td><td class="num">5</td><td class="num">3%</td><td class="num">4.5%</td><td>1〜7</td></tr>
+  <tr><td>ティア2</td><td class="num">8</td><td class="num">5%</td><td class="num">7.5%</td><td>8〜11</td></tr>
+  <tr><td>ティア3</td><td class="num">15</td><td class="num">8%</td><td class="num">12%</td><td>12〜14</td></tr>
+  <tr><td>一億人呪霊</td><td class="num">40</td><td class="num">100%</td><td class="num">100%</td><td>1/4で15、ほかはティア2〜3のどれか</td></tr>
+</table></div>
+
+<h2 id="workbench">呪いの作業台</h2>
+<p>防具と呪具はここで作ります。左にレシピの一覧（素材・食べ物・防具・呪具の順）が出て、選ぶと持ち物から素材を自動で並べます。足りない素材にマウスを合わせると <b>入手方法</b> が出ます。くわしくは <a href="craft.html">呪いの作業台</a>。</p>
+
+<h2 id="sound">音量の設定</h2>
+<p>「設定 → 音量とサウンド」に、このモッドのつまみが2つ増えました（<b>モッドの BGM</b>・<b>モッドの効果音</b>。自分のパソコンに覚えます）。マイクラのふつうのつまみ（マスター×分類）で決まった大きさに、さらにこのつまみが掛かります。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>音</th><th>ふつうのつまみ</th><th>モッドのつまみ</th></tr>
+  <tr><td>BGM（地上・ネザー・シムリア星・ボス戦の曲）</td><td>ジュークボックス／音符ブロック</td><td>モッドの BGM</td></tr>
+  <tr><td>術式の音・技の効果音・ボスの声（ほとんど）</td><td>声／スピーチ</td><td>モッドの効果音</td></tr>
+  <tr><td>一部の敵の音（一億人呪霊など）</td><td>敵対的なモブ</td><td>—</td></tr>
+  <tr><td>ネザーの遠くの音（地鳴り・ガストのうめき・溶岩・炎）</td><td>環境</td><td>—</td></tr>
+  <tr><td>エンディングの曲</td><td>マスター（ほかのBGMと同じくらいの大きさにそろえてある）</td><td>—</td></tr>
+</table></div>
+<p>モッドのつまみが掛かるのは、モッドが印を付けて鳴らした音と、画面側で鳴らした音だけです。どの音に印が付いているかの細かい一覧は <span class="tag wip">確認中</span>。エンディングの曲が流れている間は、ほかのBGMは止まります。</p>
+</main>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

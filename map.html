@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地図 - ver17 mod版 解説</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
+<main>
+<h1>地図（ミニマップ） <span class="tag new">mod版</span></h1>
+<p class="lead">画面の右上の丸い <b>ミニマップ</b> と、持ち物画面（<kbd>E</kbd>）の <b>大きな地図</b> です。仲間・呪霊・ボス・領域・帳・目印が出て、マークを置いたり仲間へテレポートしたりできます。</p>
+<p class="toc"><a href="#mini">ミニマップ</a><a href="#marks">印</a><a href="#big">大きな地図</a><a href="#tp">テレポート</a><a href="#set">設定</a></p>
+
+<h2 id="mini">ミニマップ</h2>
+<ul>
+  <li>画面の右上に丸い地図。地形はまわりから少しずつ色を読んで覚えます。洞窟・ネザーでは足もとの断面を描きます。</li>
+  <li>ミニマップが出ている間、右上の効き目のアイコンはミニマップの幅だけ左へずれます。</li>
+  <li>大きさは呪力バーの数字より上に収まるよう自動で縮みます。</li>
+</ul>
+
+<h2 id="marks">地図に出る印 <span class="tag exact">確定</span></h2>
+<div class="tbl-wrap"><table>
+  <tr><th>印</th><th>何</th><th>出る条件</th></tr>
+  <tr><td>白い矢印</td><td>自分</td><td>—</td></tr>
+  <tr><td>青</td><td>仲間（チーム A）</td><td>同じディメンションなら距離の制限なし</td></tr>
+  <tr><td>赤（等級が高いほど大きい）</td><td>呪霊</td><td rowspan="3">96ブロック以内。<b>六眼</b>があれば全部、なければ12ブロック以内か、見えている物だけ（透明は出ない）</td></tr>
+  <tr><td>だいだいのひし形</td><td>ミニボス</td></tr>
+  <tr><td>赤紫の四角</td><td>ボス</td></tr>
+  <tr><td>色の輪</td><td>領域</td><td>—</td></tr>
+  <tr><td>紫の四角</td><td>帳</td><td>—</td></tr>
+  <tr><td>目印</td><td>ロケット・帰りのゲート・拠点（復活地点）・初期地点・シムリア星からの帰り先</td><td>ロケットとゲートは地形を読んだときに見つけた物（地上のいちばん上だけ）</td></tr>
+  <tr><td>マーク</td><td>地図に置いた印</td><td>自分の物と、チーム A の仲間が置いた物</td></tr>
+</table></div>
+
+<h2 id="big">持ち物画面の大きな地図</h2>
+<p>サバイバルで持ち物画面を開くと、左に大きな地図、そのさらに左に設定ボタンが出ます（レシピ本を開いて左がふさがっていれば右、どちらも狭ければ出ません）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>操作</th><th>すること</th></tr>
+  <tr><td>ドラッグ／ホイール</td><td>地図を動かす／拡大縮小</td></tr>
+  <tr><td>左クリック</td><td>その場所に <b>マーク</b> を置く（仲間にも見える）。仲間の印の上なら、その仲間へ <a href="#tp">テレポート</a></td></tr>
+  <tr><td>右クリック</td><td>自分のマークを消す（消せるのは自分のマークだけ）</td></tr>
+  <tr><td>「現在地へ」</td><td>地図を自分のいる所に戻す</td></tr>
+</table></div>
+<p>マークは1人8個まで（超えると自分の古いマークから消える）、全員で128個まで。オーバーワールドに保存され、次に入ったときも残ります。</p>
+
+<h2 id="tp">仲間へテレポート <span class="tag exact">確定</span></h2>
+<p>メニューの「近くの仲間にテレポート」と同じ条件・同じ消費で、行き先だけ地図で選べます。</p>
+<ul>
+  <li>使えないとき：無量空処を受けている、最後に殴ってきた相手がボスなどの敵、だれかの領域がある、ボスが20ブロック以内、謎負担が40より多い。</li>
+  <li>行き先は同じディメンションの仲間（チーム A）。使うと謎負担が80まで上がります。</li>
+</ul>
+
+<h2 id="set">設定</h2>
+<p>大きな地図の横のボタンで変えます（自分のパソコンに覚えます）。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>ボタン</th><th>中身</th></tr>
+  <tr><td>表示</td><td>右上のミニマップを出す／出さない</td></tr>
+  <tr><td>大きさ</td><td>ミニマップの大きさ（小・中・大）</td></tr>
+  <tr><td>拡大</td><td>ミニマップの拡大率（×2 がいちばん近く ／ ×1 ／ ×½ ／ ×¼）</td></tr>
+  <tr><td>回転</td><td>向いている方に合わせて回す（切ると北が上）</td></tr>
+  <tr><td>仲間・呪霊・ボス・範囲・目印・マーク</td><td>それぞれの印を出す／出さない</td></tr>
+  <tr><td>座標</td><td>ミニマップの下に今の座標を出す</td></tr>
+</table></div>
+</main>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
+<script src="assets/nav.js"></script>
+</body>
+</html>

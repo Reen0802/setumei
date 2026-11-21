@@ -3,38 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>リカ（理香）</title>
+<title>乙骨（里香） - ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
-<h1 class="c-rika">リカ（理香）</h1>
+<h1 class="c-rika">乙骨（里香）</h1>
 <p class="lead">「呪いの刀」で戦いながら、リカを呼んで一緒に戦う術式。呪霊の手足を切り落とすと、その術式を <b>模倣</b> して使えるようになります。</p>
-<p class="toc"><a href="#ctrl">操作</a><a href="#tree">技術ツリー</a><a href="#rika">リカ本体</a><a href="#setsu">接続時間</a><a href="#jun">純愛砲</a><a href="#mohou">模倣</a><a href="#waza">技の一覧</a></p>
+<p class="toc"><a href="#ctrl">操作</a><a href="#toushi">投射呪法</a><a href="#tree">技術ツリー</a><a href="#rika">リカ本体</a><a href="#setsu">接続時間</a><a href="#jun">純愛砲</a><a href="#mohou">模倣</a><a href="#waza">技の一覧</a></p>
 <p><a href="sim.html?t=rika">→ シミュレーターで自分のステータスの数字を見る</a></p>
 
 <h2 id="ctrl">操作</h2>
+<p>キーでの操作です（術式アイテムの右クリックでも同じ技が出ます）。全体は <a href="controls.html">操作</a> のページへ。</p>
 <div class="tbl-wrap"><table>
-  <tr><th>操作</th><th>すること</th></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>右クリック</kbd>（右手）</td><td>次の技へ（1〜7）</td></tr>
-  <tr><td>ジャンプ中に<kbd>スニーク</kbd>＋<kbd>左クリック</kbd></td><td>前の技へ</td></tr>
-  <tr><td><kbd>右クリック</kbd>（右手）</td><td>リカを呼ぶ（いないとき）／技1ならリカの距離を切り替え／技2なら純愛砲 など</td></tr>
-  <tr><td><kbd>右クリック</kbd>（左手に持つ）</td><td>模倣した術式を使う（技ごとにちがう）</td></tr>
-  <tr><td><kbd>左クリック</kbd></td><td>見ている敵をリカに攻撃させる（技1〜4）／技4ならうすらび／技7なら呪力放出</td></tr>
-  <tr><td>左手に持って <kbd>ダブルスニーク</kbd></td><td>リカを影にしまう（体力は保存される）</td></tr>
+  <tr><th>技</th><th><kbd>R</kbd>（右手）</th><th><kbd>ダッシュ</kbd>＋<kbd>R</kbd>（左手）</th><th><kbd>シフト</kbd>＋<kbd>R</kbd>（左手＋シフト）</th></tr>
+  <tr><td>1</td><td>リカの範囲（近→中→長→超近）。いなければリカを出す</td><td>ブギウギ（自分と前の敵を入れ替え）</td><td>ブギウギ（前の2体を入れ替え）</td></tr>
+  <tr><td>2</td><td><b>純愛ビーム</b>（純愛砲）</td><td>無下限（模倣）</td><td>捌（模倣）</td></tr>
+  <tr><td>3</td><td><a href="#toushi">投射呪法</a>（短押し：自動／長押し：道すじを描く）</td><td>呪言（模倣）</td><td>赤血（模倣）</td></tr>
+  <tr><td>4</td><td>リカを出す／補充</td><td>ヤコブの梯子（模倣）</td><td><b>うすらび オン／オフ</b>（オンの間は、何を持っていても左クリックでうすらび）</td></tr>
+  <tr><td>5</td><td>領域展開「真贋相愛」</td><td>領域の必中効果を変える（無下限／みずし）</td><td>領域展開</td></tr>
+  <tr><td>6</td><td>反転術式</td><td>反転術式</td><td>反転術式</td></tr>
+  <tr><td>7</td><td>呪力放出</td><td>—</td><td>—</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+  <tr><th>キー</th><th>すること</th></tr>
+  <tr><td><kbd>C</kbd> ／ <kbd>シフト</kbd>＋<kbd>C</kbd></td><td>次の技へ ／ 前の技へ（1〜7）</td></tr>
+  <tr><td><kbd>L</kbd>（またはダブルシフト）</td><td>リカを影にしまう（体力は保存される）。技5のときは領域のプリセット切り替え</td></tr>
+  <tr><td><kbd>H</kbd> ／ <kbd>シフト</kbd>＋<kbd>H</kbd></td><td>反転術式 ／ 焼き切れの回復</td></tr>
+  <tr><td><kbd>Z</kbd>・<kbd>V</kbd>・<kbd>J</kbd></td><td>出力・簡易領域・身体強化</td></tr>
+  <tr><td>左クリック</td><td>見ている敵をリカに攻撃させる など（データパックのまま）</td></tr>
   <tr><td>右手の刀で攻撃</td><td>「呪いの刀」は呪具。突き攻撃で前に突進する</td></tr>
 </table></div>
+<p>ブギウギは、<kbd>ダッシュ</kbd>を押している間・スニークしている間、だれとだれが入れ替わるかが自分の画面にだけ見えます。</p>
+
+<h2 id="toushi">投射呪法（新しい操作）<span class="tag new">mod版</span></h2>
 <div class="tbl-wrap"><table>
-  <tr><th>技</th><th>右手</th><th>左手</th></tr>
-  <tr><td>1</td><td>リカの距離（近→中→長→超近）</td><td>ブギウギ（模倣）</td></tr>
-  <tr><td>2</td><td><b>純愛砲</b></td><td>無下限（模倣）／スニークで みずし（模倣）</td></tr>
-  <tr><td>3</td><td>投射呪法（模倣）</td><td>呪言（模倣）／スニークで 赤血（模倣）</td></tr>
-  <tr><td>4</td><td>左クリックで うすらび（模倣）</td><td>ヤコブの梯子（模倣）</td></tr>
-  <tr><td>5</td><td>領域展開「真贋相愛」</td><td>領域の効果を切り替え（無下限／みずし）</td></tr>
-  <tr><td>6</td><td>反転術式（左クリックで他人を治す）</td><td>焼き切れの治療</td></tr>
-  <tr><td>7</td><td>右クリック：呪力放出2／左クリック：呪力放出</td><td>—</td></tr>
+  <tr><th>押し方</th><th>どうなる</th></tr>
+  <tr><td><kbd>R</kbd> を短く押す（0.3秒より短い）</td><td>照準の先の敵（30ブロック以内・照準から25°以内）へ <b>回り込む道すじ（24コマ）を自動で作って</b>、一気に動く。敵を通り抜けて少し進む。敵がいなければ見ている方向へまっすぐ。壁・地面の手前で止まる</td></tr>
+  <tr><td><kbd>R</kbd> を長押し</td><td>見ている方向へ道すじの点（1コマ1.5ブロック）が1つずつ伸びる（最大24コマ、自分にだけ見える）。離すか24コマ描いたら、その道すじを動く。道すじが壁にぶつかっていると「フレームの作成に失敗」</td></tr>
 </table></div>
+<ul>
+  <li><b>コマ止め</b>：動いている間に触れた敵（道すじから1.6ブロック）はガラスの枠に閉じ込められ、2.5秒動けない。殴るとガラスが割れて追加ダメージ。</li>
+  <li><b>加速</b>：敵に当てると、4秒の間 加速の段階が1つ上がる（最大5、当てるたびに4秒が戻る）。段階が高いほど速く（段階5で約2.7倍）、ガラスの追加ダメージが大きい（段階5で2.25倍）。</li>
+  <li><b>空振り</b>：何にも当たらないと、自分が0.7秒コマ止めになって固まり、加速もなくなる。</li>
+  <li>画面にフィルムの縁取りとコマ数・加速の段階・残り時間が出ます。消費呪力と焼き切れは <a href="#waza">技の一覧</a> の投射呪法と同じです。</li>
+</ul>
 
 <h2 id="tree">技術ツリー（スコアで解放）</h2>
 <div class="tbl-wrap"><table>
@@ -49,7 +63,7 @@
 <ol class="steps">
   <li><b>補充</b>：リカがいないときに右クリック → 接続時間600を使ってリカを補充（体力 3＋10×呪力操作）。</li>
   <li><b>召喚</b>：もう一度右クリック → 接続時間10を使ってリカが出てくる。</li>
-  <li><b>しまう</b>：左手に持ってダブルスニーク。残りの体力は保存され、次に出すときそのまま。</li>
+  <li><b>しまう</b>：<kbd>L</kbd>（またはダブルシフト）。残りの体力は保存され、次に出すときそのまま。</li>
 </ol>
 <div class="tbl-wrap"><table>
   <tr><th>項目</th><th>計算</th></tr>
@@ -104,7 +118,7 @@
 </table></div>
 <p>「攻撃力」は自分の攻撃力（ステータスの攻撃力×0.2、刀や力の効果もふくむ）です。</p>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>

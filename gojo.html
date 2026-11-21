@@ -3,30 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>無下限呪術</title>
+<title>五条（無下限呪術） - ver17 mod版 解説</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17β 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="status.html">ステータス・呪力</a><a class="nl" href="domain.html">領域展開</a><a class="nl" href="curses.html">呪霊・ボス</a><a class="nl" href="bosses.html">ボス攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="gojo.html">無下限呪術</a><a class="nl" href="rika.html">リカ</a><a class="nl" href="tokusa.html">十種影法術</a><a class="nl" href="sim.html">シミュレーター</a></div></nav>
+<nav class="site-nav" aria-label="メニュー"><div class="inner"><a class="brand" href="index.html">ver17 mod版 解説</a><a class="nl" href="index.html">トップ</a><a class="nl" href="controls.html">操作</a><a class="nl" href="screens.html">画面</a><a class="nl" href="map.html">地図</a><a class="nl" href="guide.html">進め方</a><a class="nl" href="status.html">ステータス</a><a class="nl" href="gear.html">呪具・防具</a><a class="nl" href="craft.html">作業台</a><a class="nl" href="domain.html">領域</a><a class="nl" href="curses.html">呪霊</a><a class="nl" href="bosses.html">ボス</a><a class="nl" href="simuria.html">シムリア星</a><a class="nl" href="gojo.html">五条</a><a class="nl" href="rika.html">乙骨</a><a class="nl" href="tokusa.html">十種</a><a class="nl" href="world.html">そのほか</a><a class="nl" href="strategy.html">攻略</a><a class="nl" href="challenge.html">チャレンジ</a><a class="nl" href="sim.html">シミュ</a></div></nav>
 <main>
-<h1 class="c-gojo">無下限呪術</h1>
+<h1 class="c-gojo">五条（無下限呪術）</h1>
 <p class="lead">吸い込む「蒼」、はじき飛ばす「赫」、すべてを消し飛ばす「茈」。強いぶん呪力と焼き切れをたくさん使う術式です。</p>
-<p class="toc"><a href="#ctrl">操作</a><a href="#tree">技術ツリー</a><a href="#ao">蒼</a><a href="#aka">赫</a><a href="#mu">茈</a><a href="#eis">詠唱</a><a href="#mp">無制限の紫</a><a href="#other">その他の技</a><a href="#mk">無下限・六眼</a></p>
+<p class="toc"><a href="#ctrl">操作</a><a href="#warp">蒼ワープ</a><a href="#tree">技術ツリー</a><a href="#ao">蒼</a><a href="#aka">赫</a><a href="#mu">茈</a><a href="#eis">詠唱</a><a href="#mp">無制限の紫</a><a href="#other">その他の技</a><a href="#mk">無下限・六眼</a></p>
 <p><a href="sim.html?t=gojo">→ シミュレーターで自分のステータスの数字を見る</a></p>
 
 <h2 id="ctrl">操作</h2>
+<p>キーでの操作です（術式アイテムの右クリックでも同じ技が出ます）。全体は <a href="controls.html">操作</a> のページへ。</p>
 <div class="tbl-wrap"><table>
-  <tr><th>操作</th><th>すること</th></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>右クリック</kbd>（右手）</td><td>次の技へ（1蒼 → 2赫 → 3茈 → 4領域展開 → 5反転術式）</td></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>左クリック</kbd>（右手）</td><td>前の技へ</td></tr>
-  <tr><td><kbd>右クリック</kbd>（右手）</td><td>選んでいる技を使う</td></tr>
-  <tr><td><kbd>左クリック</kbd>（右手）</td><td>蒼：止まった蒼を見ている方へ動かす／赫：詠唱赫の向きを変える／反転：目の前の相手を治す</td></tr>
-  <tr><td><kbd>右クリック</kbd>（左手に持つ）</td><td><b>蒼ワープ</b>：小さな蒼を飛ばし、もう一度でそこへワープ</td></tr>
-  <tr><td><kbd>スニーク</kbd>＋<kbd>右クリック</kbd>（左手）</td><td><b>蒼パンチ</b>：目の前の敵を引き寄せて殴る</td></tr>
-  <tr><td><kbd>スニーク長押し</kbd>（右手）</td><td><a href="#eis">詠唱</a>（技によって長さがちがう）</td></tr>
-  <tr><td>本を持って<kbd>左クリック</kbd></td><td>出力Ⅰ→Ⅱ→Ⅲ の切り替え</td></tr>
+  <tr><th>キー</th><th>すること</th></tr>
+  <tr><td><kbd>C</kbd> ／ <kbd>シフト</kbd>＋<kbd>C</kbd></td><td>次の技へ ／ 前の技へ（1蒼 → 2赫 → 3茈 → 4領域展開 → 5反転術式）</td></tr>
+  <tr><td><kbd>R</kbd></td><td>選んでいる技を使う（茈は2秒溜めて離す）</td></tr>
+  <tr><td><kbd>R</kbd> 長押し（2秒）</td><td><a href="#eis">詠唱</a>（技1〜3）</td></tr>
+  <tr><td><kbd>ダッシュ</kbd>＋<kbd>R</kbd></td><td><a href="#warp">蒼ワープ</a>（短押し：飛び込み／長押し：照準へ）。技4は領域の左手の動き、技5は反転術式</td></tr>
+  <tr><td><kbd>シフト</kbd>＋<kbd>R</kbd></td><td><b>蒼パンチ</b>：目の前の敵を引き寄せて殴る（技5は反転術式）</td></tr>
+  <tr><td><kbd>H</kbd> ／ <kbd>シフト</kbd>＋<kbd>H</kbd></td><td>反転術式 ／ 焼き切れの回復</td></tr>
+  <tr><td><kbd>Z</kbd></td><td>出力Ⅰ→Ⅱ→Ⅲ の切り替え</td></tr>
+  <tr><td><kbd>L</kbd>（技4のとき）</td><td>領域のプリセット切り替え</td></tr>
+  <tr><td><kbd>Y</kbd> → アビリティ1</td><td><a href="#mk">無下限</a> のオン／オフ</td></tr>
 </table></div>
-<p>画面下に「技・出力・焼き切れ・謎負担・領域・ガードPT」が出ます。</p>
+<p>画面の右に呪力、その左に焼き切れ・謎負担のバー、ホットバーの左に技と出力が出ます（<a href="screens.html#hud">画面</a>）。</p>
+
+<h2 id="warp">蒼ワープ（新しい）<span class="tag new">mod版</span></h2>
+<ul>
+  <li><b>短く押す</b>（<kbd>ダッシュ</kbd>＋<kbd>R</kbd>）：目の前の敵へ自分が飛び込む。</li>
+  <li><b>長押し</b>：照準（粒）が1秒に5ブロックの速さで前へ伸び（最大40ブロック）、離すと照準まで自分が引っ張られる。</li>
+  <li>動き出すときに <b>蒼パンチ状態</b> になります（約1秒以内に攻撃を当てると蒼パンチ）。</li>
+  <li>費用は蒼パンチと同じ：消費呪力 a,b,c＝10, 40, 0、焼き切れ A=50, B=1。焼き切れ400以上・直前の技のクールタイム中は使えません。</li>
+</ul>
+<div class="note">茈は <b>2秒溜めないと撃てません</b>（<kbd>R</kbd> を押し続けて、2秒たってから離す）。溜めている間は青と赤の光が回りながら近づき、2秒で紫になります。溜めている途中は、ボスの五条悟に割り込まれることがあります。</div>
 
 <h2 id="tree">技術ツリー（スコアで解放）</h2>
 <p>本の「技術ツリー表示」→ スキル1（蒼）／スキル2（赫）／スキル3（茈）。上から順に解放します。</p>
@@ -55,7 +66,7 @@
 <div class="formula">消費呪力の式は <a href="status.html#cost">ステータスのページ</a>。例：術式5・操作0・出力Ⅰ → 5×5＋100＋5 ＝ 130</div>
 
 <h3>最大出力の蒼（術式順転）</h3>
-<p>出力Ⅱで蒼を選び、<kbd>スニーク</kbd>を約2.5秒続けると「出力最大」。次の蒼が、横に大きく流れる巨大な蒼になります（破壊ONのとき地形をえぐる）。消費 a,b,c＝50, 30, 10、焼き切れ A,B＝50, 2（焼き切れ300未満のとき）。</p>
+<p>出力Ⅱで蒼を選び、<kbd>スニーク</kbd>を約2.5秒続けると「出力最大」（mod版でのやり方は <span class="tag wip">確認中</span>）。次の蒼が、横に大きく流れる巨大な蒼になります（破壊ONのとき地形をえぐる）。消費 a,b,c＝50, 30, 10、焼き切れ A,B＝50, 2（焼き切れ300未満のとき）。</p>
 
 <h2 id="aka">2. 赫（あか）</h2>
 <p>使うと手に赫をためます。<b>約1.5秒以内</b> に敵に触れるか、時間が来ると発動し、前方の敵を <b>はじき飛ばします</b>。はじかれた敵が <b>壁や他の生き物にぶつかったとき</b> にダメージ。</p>
@@ -89,9 +100,9 @@
 </ul>
 
 <h2 id="eis">詠唱（完全詠唱）</h2>
-<p>右手に術式アイテムを持って <kbd>スニーク長押し</kbd>。セリフが進み、最後まで言うと次の技が「詠唱版」になります。技術ツリーで「完全詠唱」を解放していないと使えません。</p>
+<p>mod版では <kbd>R</kbd> を押し続けると詠唱になります（前の「右手に術式アイテムを持ってスニーク長押し」と同じ。下の表の「長さ」は R を押し続ける長さ）。セリフが進み、最後まで言うと次の技が「詠唱版」になります。技術ツリーで「完全詠唱」を解放していないと使えません。</p>
 <div class="tbl-wrap"><table>
-  <tr><th>技</th><th>条件</th><th>詠唱（スニークの長さ）</th><th>消費 (a,b,c)</th><th>焼き切れ</th><th>効果</th></tr>
+  <tr><th>技</th><th>条件</th><th>詠唱（押し続ける長さ）</th><th>消費 (a,b,c)</th><th>焼き切れ</th><th>効果</th></tr>
   <tr><td>詠唱蒼</td><td>出力Ⅲ・焼き切れ150未満</td><td>位相（5秒）→ 黄昏（10秒）→ 知恵の瞳（15秒）</td><td>60, 500, 50</td><td>A=200,B=2 ＋100</td><td>15ブロック先に巨大な蒼。半径15の敵を吸い込み、半径5に毎tick <span class="mono">(1＋術式)×0.005</span>。<span class="mono">200＋4×呪力操作</span> tick 残る。破壊ONなら地形をえぐる</td></tr>
   <tr><td>詠唱赫</td><td>赫を選ぶ</td><td>位相（2.5秒）→ 波羅蜜（5秒）→ 光の柱（7.5秒）</td><td>60, 500, 60</td><td>A=240,B=3 ＋100</td><td>大きな赫が飛び、敵を押しながら1ずつ削り、最後に半径5で <span class="mono">術式×5</span>（特典で×10）</td></tr>
   <tr><td>詠唱茈</td><td>茈を選ぶ</td><td>九綱 → 偏光 → 烏と声明 → 表裏の間（10秒）</td><td>100, 1500, 100</td><td>A=500,B=2 ＋100</td><td>超巨大な茈。半径12・速さ3.5。ダメージは今の出力の茈と同じ式</td></tr>
@@ -100,8 +111,8 @@
 <h2 id="mp">無制限の紫（詠唱蒼 × 詠唱赫）</h2>
 <p>置いてある <b>詠唱蒼</b> に、<b>詠唱赫</b> をぶつける（5ブロック以内に入れる）と、2つが合わさって <b>無制限の紫</b> になります。詠唱赫は左クリックで向きを変えられるので、蒼に向けて飛ばしましょう。</p>
 <ol class="steps">
-  <li>出力Ⅲで蒼を選び、スニーク15秒で「知恵の瞳」まで詠唱 → 右クリックで詠唱蒼を置く。</li>
-  <li>技を赫に変え、スニーク7.5秒で「光の柱」まで詠唱 → 右クリックで詠唱赫を撃ち、左クリックで詠唱蒼の方へ向ける。</li>
+  <li>出力Ⅲで蒼を選び、R 長押し15秒で「知恵の瞳」まで詠唱 → 右クリックで詠唱蒼を置く。</li>
+  <li>技を赫に変え、R 長押し7.5秒で「光の柱」まで詠唱 → 右クリックで詠唱赫を撃ち、左クリックで詠唱蒼の方へ向ける。</li>
   <li>2つが重なると紫に変わり、その場で回りながら <b>どんどん大きく</b> なります。</li>
 </ol>
 <div class="tbl-wrap"><table>
@@ -118,19 +129,44 @@
 <h2 id="other">その他の技</h2>
 <div class="tbl-wrap"><table>
   <tr><th>技</th><th>消費</th><th>焼き切れ</th><th>説明</th></tr>
-  <tr><td>蒼ワープ（左手で右クリック）</td><td>呪力100（固定）</td><td>+30（特典で+15）</td><td>小さな蒼を投げる。止まってから約3秒以内（特典で約6秒）にもう一度右クリックでその場所へワープ。呪力100以上・焼き切れ150未満。</td></tr>
-  <tr><td>蒼パンチ（左手でスニーク＋右クリック）</td><td>a,b,c＝10, 40, 0</td><td>A=50, B=1</td><td>目の前の敵を引き寄せ、力Ⅳ＋強いノックバックで殴る。黒閃のダメージが2倍。焼き切れ400未満。</td></tr>
+  <tr><td>蒼ワープ（ダッシュ＋R）</td><td>a,b,c＝10, 40, 0</td><td>A=50, B=1</td><td>mod版で新しくなった。<a href="#warp">上を見る</a></td></tr>
+  <tr><td>蒼パンチ（シフト＋R）</td><td>a,b,c＝10, 40, 0</td><td>A=50, B=1</td><td>目の前の敵を引き寄せ、力Ⅳ＋強いノックバックで殴る。黒閃のダメージが2倍。焼き切れ400未満。</td></tr>
   <tr><td>4 領域展開「無量空処」</td><td>呪力1500</td><td>A=150, B=1</td><td><a href="domain.html">領域展開のページ</a></td></tr>
   <tr><td>5 反転術式</td><td>1500 − 呪力操作</td><td>—</td><td><a href="status.html#hanten">反転術式のページ</a></td></tr>
 </table></div>
 
-<h2 id="mk">無下限（バリア）と六眼</h2>
+<h2 id="mk">無下限（バリア）と六眼 <span class="tag new">mod版</span></h2>
+<p>無下限はプレイヤーも、さとる・五条悟も、無下限を持つ呪霊も、同じしくみで動きます（数字は <code>InfinityTable</code>）。<kbd>Y</kbd> の「アビリティ1」でオン／オフ。張っている間は画面のふちがうっすら青くなり、3.5ブロックの所にごく薄い <b>膜</b> が見えます（何かが止まると波紋、中和されると割れる。<a href="world.html#look">見た目</a>）。近づく相手は押し返さず、手前で止めるだけです。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>止めるもの</th><th>どうなる</th></tr>
+  <tr><td>弾（矢・火の玉・トライデント・投げた物・術式の弾・呪霊やボスの弾）</td><td>自分から <b>3.5ブロック</b> の手前の空中で止まって浮く。無下限を解くか、2ブロック以上はなれると落ちる（30秒たっても落ちる）</td></tr>
+  <tr><td>近づく相手</td><td>5.5ブロックから近づくほど遅くなり、3.5ブロックの手前で止まる（触れられない）</td></tr>
+  <tr><td>ダメージ（殴る・弾・爆発・範囲技）</td><td>届かない。防がないのは：落下・溺れ・空腹など／自分の技／味方の攻撃／領域の必中</td></tr>
+</table></div>
+<h3>中和される（無下限が効かない）とき</h3>
 <ul>
-  <li><b>無下限</b>：本の「アビリティ1」でON／OFF。自分から3.5ブロック以内の敵の動きを止め、弱体化させます（クリーパーも爆発しない）。0.5秒ごとに「呪力回復＋10」の呪力と焼き切れ+3を使います。焼き切れが350を超えるか呪力が0で切れます。逆鉾を持った敵が近いと消されます。</li>
+  <li>相手の <b>領域の中</b>（必中）。ただし自分が <b>簡易領域</b> を張っていれば中和されない。</li>
+  <li><b>天逆鉾</b> を持った相手がそば（3.5ブロック）にいる／それで当てられた。<b>黒縄</b>・<b>黒閃</b> で当てられた。</li>
+  <li>近く15ブロックに無下限を消す敵がいる、術式が止められている。</li>
+  <li><b>領域展延</b> の相手（身体強化 出力Ⅲなど）は一部だけ中和：止まらずに近づけて殴りも届くが、3ブロック以内で弱体化Ⅱ＋鈍化Ⅱ。</li>
+</ul>
+<h3>呪力の消費 <span class="tag exact">確定</span></h3>
+<p>0.5秒ごとに「呪力回復＋10」の呪力と焼き切れ+3（前と同じ）に加えて、<b>止めている相手の重さの合計</b>（上限30）の呪力を使います。焼き切れが350を超えるか呪力が0で切れます。</p>
+<div class="tbl-wrap"><table>
+  <tr><th>止めている相手</th><th class="num">重さ</th></tr>
+  <tr><td>4級・3級・2級・1級・特級呪霊</td><td class="num">1・2・3・5・8</td></tr>
+  <tr><td>ネザー呪霊</td><td class="num">6</td></tr>
+  <tr><td>ティア1・ティア2・ティア3ボス</td><td class="num">8・12・18</td></tr>
+  <tr><td>五条悟</td><td class="num">25</td></tr>
+  <tr><td>プレイヤー・ほかの敵対モブ</td><td class="num">1</td></tr>
+  <tr><td>おとなしい生き物</td><td class="num">0</td></tr>
+  <tr><td>弾1個</td><td class="num">撃った者の半分（最低1）</td></tr>
+</table></div>
+<ul>
   <li><b>六眼</b>：六眼のアイテムを右クリックで付けられます（無下限呪術の人だけ。死ぬと外れる）。消費呪力が「c×術式ダメージ」だけになり、焼き切れも減り、反転術式は375で使えます。近くの呪霊が見えやすくなります。</li>
 </ul>
 </main>
-<footer>ver17β 解説サイト ・ データパックの中身から作成</footer>
+<footer>ver17 mod版 解説サイト ・ モッドのコードとデータから作成。調整で数字が変わることがあります。</footer>
 <script src="assets/nav.js"></script>
 </body>
 </html>
